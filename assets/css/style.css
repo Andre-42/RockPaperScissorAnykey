@@ -1,0 +1,14 @@
+/* general style */
+body {
+    background-color: white;
+    color:black;
+    margin: 0px;
+    padding: 0px;
+
+    font-family: Verdana, "Times New Roman";
+}
+
+.headerfooter {
+    background-color: darkslategrey;
+    color:ghostwhite;
+}
