@@ -83,7 +83,10 @@ header>div>div {
     width: 60%;
 }
 /* take silent class out when functional*/
-.silent {
+#hideplayer {
+    display: inline-block;
+}
+#activeplayer {
     display: none;
 }
 .gamehand {
@@ -94,9 +97,10 @@ header>div>div {
     display: inline-block;
     padding: 5px 5px;
     text-align: center;
+    color: black;
 }
 .fa-regular {
-    font-size: 70px;
+    font-size: 60px;
     font-weight: normal;
 }
 .noicon {
@@ -110,4 +114,7 @@ header>div>div {
 /* score sheet */
 #scoresheet {
     background-color:darkslategrey;
+}
+#tracker {
+    display: block;
 }
