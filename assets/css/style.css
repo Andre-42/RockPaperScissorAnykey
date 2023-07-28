@@ -18,21 +18,32 @@ header > div > div {
 }
 /* button design */
 .btn {
-    background-color: magenta;
-    width: 150px;
+    background-color: floralwhite;
+    width: 300px;
     height: 50px;
+    padding: 15px 32px;
+    margin: 4px 2px;
+    display: inline-block;
     
     border: none;
-    color: white;
-    padding: 15px 32px;
+    border-radius: 10px;
+
+    color: darkslategrey;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     font-size: 16px;
-    margin: 4px 2px;
+    
     cursor: pointer;
 }
 
 .btn-anykey {
     max-height: 50px;
+    display: inline-block;
+}
+.btn > p {
+    display: inline-block;
+}
+
+.fa-solid {
+    font-size: 45px;
 }
