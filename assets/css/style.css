@@ -12,10 +12,13 @@ body {
     background-color: darkslategrey;
     color: ghostwhite;
 }
-
+header > div + div{
+    text-align:justify;
+    vertical-align: -webkit-baseline-middle;
+}
 header>div>div {
     display: inline-block;
-    color: green;
+    vertical-align: -webkit-baseline-middle;
 }
 
 /* button design */
@@ -47,12 +50,13 @@ header>div>div {
 
 .btn>p {
     position: relative;
-    top: -10px;
-    display: inline-block;
-    vertical-align: middle;
-}
-.anykey p {
     top: -15px;
+    display: inline-block;
+    vertical-align: -webkit-baseline-middle;
+}
+.btn-anykey > p {
+    top: -25px;
+    
 }
 
 .fa-solid {
@@ -64,8 +68,18 @@ header>div>div {
 }
 .pc {
     width: 30%;
+    text-align:center;
+    
+}
+.pc {
+    padding: 5px 0px;
+}
+.pc > div{
+    position: relative;
+    top: 0px;
 }
 .your {
+    text-align: justify;
     width: 60%;
 }
 /* take silent class out when functional*/
@@ -73,19 +87,24 @@ header>div>div {
     display: none;
 }
 .gamehand {
+    vertical-align:-webkit-baseline-middle;
     background-color:antiquewhite;
     height: 75px;
     width: 75px;
     display: inline-block;
+    padding: 5px 5px;
+    text-align: center;
 }
 .fa-regular {
     font-size: 70px;
     font-weight: normal;
 }
-.gamehand > img {
+.noicon {
     position: relative;
+    vertical-align:-webkit-baseline-middle;
+}
+.gamehand > img {
     max-height: 100%;
-    bottom: 0px;
 }
 
 /* score sheet */
