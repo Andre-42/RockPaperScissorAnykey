@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,6 +12,7 @@
     <!-- Fontawesome library-->
     <script src="https://kit.fontawesome.com/facb0ba5ba.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <header class="headerfooter">
         <div>
@@ -19,48 +21,122 @@
         <div>
             <div>
                 <button class="btn btn-playpause" type="button">
-                    
+
                     <i class="fa-solid fa-circle-play"></i>
                     <i class="fa-solid fa-pause"></i>
                     <p>play</p>
                     <!--img src="assets/images/circle-play-solid.svg" alt="play">
                     <p>play</p-->
-                    
+
                 </button>
             </div>
             <div>
                 <button class="btn btn-stop" type="button">
-                    
+
                     <i class="fa-solid fa-circle-stop"></i>
                     <p>stop playing</p>
-                    
+
                 </button>
             </div>
             <div>
                 <button class="btn btn-anykey" type="button">
-                    <img class="btn-anykey" src="assets/images/AnyKey_2x2cm.png" alt="anykey">
-                    <p>ultimate anykey</p>
+                    <p>ultimate </p>
+                    <img class="btn-anykeyicon" src="assets/images/AnyKey_2x2cm_2F4F4F.png" alt="anykey">
                 </button>
             </div>
             <div>
-                <button class="btn btn-stop" type="button">
-                    
-                    <i class="fa-solid fa-section"></i>
-                    <p>rules</p>
-                </button>
+                <a href="#rules">
+                    <button class="btn btn-rules" type="button">
+
+                        <i class="fa-solid fa-section"></i>
+                        <p>rules</p>
+
+                    </button>
+                </a>
             </div>
-            
+
         </div>
     </header>
     <section id="gamespace">
-
+        <div class="pc hand">
+            <i class="fa-solid fa-user-secret"></i>
+        </div>
+        <div class="your hand btn-stop btn-pause silent">
+            <i class="fa-solid fa-hand-sparkles"></i>
+        </div>
+        <div class="your hand btn-play">
+            <div class="gamehand">
+                <i class="fa-regular fa-hand"></i>
+            </div>
+            <div class="gamehand">
+                <i class="fa-regular fa-hand-scissors"></i>
+            </div>
+            <div class="gamehand">
+                <i class="fa-regular fa-hand-back-fist"></i>
+            </div>
+            <div class="gamehand">
+                <i class="fa-regular fa-hand-lizard"></i>
+            </div>
+            <div class="gamehand">
+                <i class="fa-regular fa-hand-spock"></i>
+            </div>
+            <div class="gamehand">
+                <img class="wormhole" src="assets/images/wormhole_5570657.png" alt="wormhole">
+            </div>
+            <div class="gamehand">
+                <img class="anykey" src="assets/images/AnyKey_2x2cm.png" alt="anykey">
+            </div>
+        </div>
+        
     </section>
     <section id="scoresheet">
-
+        <div>Your Score:</div>
+        <div>
+            <span>Won Sets: </span>
+            <span id="w-set">0,</span>
+            <span> Won Games:</span>
+            <span id="w-game">0</span>
+        </div>
+        <div>
+            <span>Lost</span> Sets: </span>
+            <span id="l-set">0,</span>
+            <span> Lost Games:</span>
+            <span id="l-game">0</span>
+        </div>
+        <div>
+            <span>current Set:</span>
+            <span id="c-win">0</span>
+            <span>out of</span>
+            <span id="c-played">0,</span>
+            <span>average Gamescore:</span>
+            <span id="av-score">0</span>
+        </div>
+    </section>
+    <section id="rules">
+        <h2>
+            <span><i class="fa-solid fa-section"></i></span>
+            <span>Rules</span>
+        </h2>
+        <div>
+            <ol>
+                <li>No cheating!</li>
+                <li>Start the game by pressing the play button.</li>
+                <li>Select your hand and await the response of the computer.</li>
+                <li>
+                    <p>Wins will be awarded according to the following schematic:</p>
+                </li>
+                <li>
+                    If you want a more rapid response enable the ultimate "Any" key feature. Now you can use your
+                    keyboard to quicken your response. Be aware that your oponent will listen into your movement.
+                </li>
+                <li>If you win 3 games out of a set, you have won and a new set starts.</li>
+            </ol>
+        </div>
     </section>
     <footer class="headerfooter">
 
     </footer>
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>
