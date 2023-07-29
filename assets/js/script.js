@@ -63,7 +63,8 @@ function runGame(todo) {
     } else if (tagfunc === "rules") {
         console.log("reading the rules");
     } else {
-        scoreHand(tagfunc);
+        console.log("played " + todo);
+        scoreHand(todo);
     }
 }
 function play() {
@@ -126,6 +127,36 @@ function scoreHand(player) {
     let timeTaken = document.getElementById("endTime").innerHTML;
     let pc = pcHand(timeTaken);
     // check for winner
+    let gamescore = findWinner(player,pc);
+
+    if (gamescore>0) {
+        ++document.getElementById("c-win").innerHTML;
+        ++document.getElementById("c-played").innerHTML;
+        ++document.getElementById("w-games").innerHTML;
+    } else if (gamescore<0) {
+        ++document.getElementById("c-played").innerHTML;
+        ++document.getElementById("l-games").innerHTML;
+    } else {
+        ++document.getElementById("c-played").innerHTML;
+    }
+    let cSet = document.getElementById("c-win").innerHTML;
+    let cGame = document.getElementById("c-played").innerHTML;
+    let cDiff = cGame-cSet;
+    if (cDiff>=3) {
+        ++document.getElementById("l-set").innerHTML;
+        document.getElementById("c-played").innerHTML = 0;
+        document.getElementById("c-win").innerHTML = 0;
+    } else if (cSet>=3) {
+        ++document.getElementById("w-set").innerHTML;
+        document.getElementById("c-played").innerHTML = 0;
+        document.getElementById("c-win").innerHTML = 0;
+    } else if (cGame == 5) {
+        console.log("5 games found.")
+        document.getElementById("c-played").innerHTML = 0;
+        document.getElementById("c-win").innerHTML = 0;
+    } else {
+        console.log("undefined score condition...")
+    }
 }
 function pcHand(timeTaken) {
     let handWeight = [document.getElementById("paper").innerHTML,
@@ -140,4 +171,23 @@ function pcHand(timeTaken) {
     let pcHandRand = Math.ceil(Math.random()*drawOptions.length);
     let draw = drawOptions[pcHand];
     return draw;
+}
+function findWinner(player, pc) {
+    let playerStrength = document.getElementsByClassName(player + "-win").id;
+    let playerWins = 0;
+    for (let strength of playerStrength) {
+        if (strength === pc) {
+            playerWins = 1;
+        }
+    }
+
+    let pcStrength = document.getElementsByClassName(pc + "-win").id;
+    let pcWins = 0;
+    for (let strength of pcStrength) {
+        if (strength === player) {
+            pcWins = 1;
+        }
+    }
+    scorePlayer = playerWins - pcWins;
+    return scorePlayer;
 }
