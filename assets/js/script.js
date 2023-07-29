@@ -1,8 +1,8 @@
 // global variables
-var drawHistory = ["paper","scissor","rock","lizard","spock","wormhole","anykeybtn"];
+var drawHistory = ["paper", "scissor", "rock", "lizard", "spock", "wormhole", "anykeybtn"];
 // event listeners
 document.addEventListener("DOMContentLoaded", function () {
-    
+
     let buttons = document.getElementsByTagName("button");
     // old syntax: for (let i=0; i<buttons.length; i++){
     for (let button of buttons) {
@@ -21,26 +21,26 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         // hover check
-        button.addEventListener("mouseenter", function() {
+        button.addEventListener("mouseenter", function () {
             let lastActive = this.getAttribute("data-type");
             console.log("active hover" + lastActive);
             console.log(((lastActive === "playpause") || (lastActive === "stop") || (lastActive === "anykey") || (lastActive === "rules")));
-            if ((lastActive === "playpause") || (lastActive === "stop") || (lastActive === "anykey") || (lastActive === "rules")) {
+            if ((lastActive === "playpause") || (lastActive === "stop") || (lastActive === "anykey") || (lastActive === "rules") || (lastActive === "playerid")) {
             } else {
-                console.log("register time")
+                console.log("register time");
                 countTime(lastActive);
-            } 
-        })
+            }
+        });
         button.addEventListener("mouseleave", function () {
             let lastActive = this.getAttribute("data-type");
             console.log("active hover" + lastActive);
             console.log(((lastActive === "playpause") || (lastActive === "stop") || (lastActive === "anykey") || (lastActive === "rules")));
-            if ((lastActive === "playpause") || (lastActive === "stop") || (lastActive === "anykey") || (lastActive === "rules")) {
+            if ((lastActive === "playpause") || (lastActive === "stop") || (lastActive === "anykey") || (lastActive === "rules") || (lastActive === "playerid")) {
             } else {
                 console.log("register time");
                 endTime(lastActive);
             }
-        })
+        });
     }
     // check answer when enter is pressed instead of button
     //document.getElementById("answer-box").addEventListener("keydown", function (event) {
@@ -53,6 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
     //runGame();
 });
 function runGame(todo) {
+    console.log(todo);
     tagfunc = document.getElementById(todo).innerText;
     if (tagfunc === "play") {
         play();
@@ -60,16 +61,21 @@ function runGame(todo) {
         pause();
     } else if (tagfunc === "stop playing") {
         stop();
+    } else if (tagfunc === "ultimate") {
+
     } else if (tagfunc === "rules") {
         console.log("reading the rules");
+    } else if (tagfunc === "playerid") {
+        playerId();
     } else {
         console.log("played " + todo);
         scoreHand(todo);
     }
 }
+
 function play() {
     console.log("game running");
-    
+
     currentText = document.getElementById("playicon").className;
     console.log(currentText);
     if (currentText === "fa-solid fa-circle-play") {
@@ -78,17 +84,17 @@ function play() {
         document.getElementById("hideplayer").style.display = "none";
         document.getElementById("activeplayer").style.display = "inline-block";
     } else {
-        console.log("Error: play-function")
+        console.log("Error: play-function");
     }
 }
 function pause() {
-    console.log("game paused")
+    console.log("game paused");
 
     currentText = document.getElementById("playicon").className;
     console.log(currentText);
-    if (currentText === "fa-solid fa-circle-play") {
-        document.getElementById("playicon").className = "fa-solid fa-pause";
-        document.getElementById("playpause").innerText = "pause";
+    if (currentText === "fa-solid fa-pause") {
+        document.getElementById("playicon").className = "fa-solid fa-circle-play";
+        document.getElementById("playpause").innerText = "play";
         document.getElementById("hideplayer").style.display = "inline-block";
         document.getElementById("activeplayer").style.display = "none";
     } else {
@@ -96,15 +102,40 @@ function pause() {
     }
 }
 function stop() {
-    console.log("game finished")
+    console.log("game finished");
     // reset play button
     document.getElementById("playicon").className = "fa-solid fa-circle-play";
     document.getElementById("playpause").innerText = "play";
     document.getElementById("hideplayer").style.display = "inline-block";
     document.getElementById("activeplayer").style.display = "none";
+
+    document.getElementById("c-win").innerHTML = 0;
+    document.getElementById("c-played").innerHTML = 0;
+    document.getElementById("w-game").innerHTML = 0;
+    document.getElementById("l-game").innerHTML = 0;
+    document.getElementById("w-set").innerHTML = 0;
+    document.getElementById("l-set").innerHTML = 0;
 }
 function anyKeyMode() {
-    console.log("AnyKey mode enabled")
+    console.log("AnyKey mode enabled");
+}
+function playerId() {
+    getIcon = document.getElementById("player-name-save").className;
+    if (getIcon === "fa-solid fa-pen-to-square") {
+        document.getElementById("inputTextField").style.display = "inline-block";
+        document.getElementById("playerid").style.diaplay = "none";
+        document.getElementById("player-name-save").className = "fa-solid fa-floppy-disk";
+    } else {
+        document.getElementById("inputTextField").style.display = "none";
+        document.getElementById("playerid").style.diaplay = "inline-block";
+    }
+}
+function changePlayerName() {
+    let newName = document.getElementById('inputTextField').value;
+    let oldName = document.getElementById('playerid').innerText;
+    if (!((oldName === newName) || (newName.length == 0))) {
+        document.getElementById('playerid').innerText = newName;
+    }
 }
 function countTime(hoverButton) {
     let checkHand = hoverButton === document.getElementById("lastActive").innerHTML;
@@ -122,72 +153,83 @@ function endTime(hoverButton) {
     console.log(checkHand);
 }
 function scoreHand(player) {
-    ++document.getElementById(player).innerHTML;
+    let score = parseInt(document.getElementById(player + 'Num').innerText); // reads string and makes integer
+    document.getElementById(player + 'Num').textContent = ++score;
     endTime(player);
     let timeTaken = document.getElementById("endTime").innerHTML;
     let pc = pcHand(timeTaken);
+    console.log("pc:"+pc+" vs player:"+player)
     // check for winner
-    let gamescore = findWinner(player,pc);
+    let gamescore = findWinner(player, pc);
+    console.log(gamescore);
 
-    if (gamescore>0) {
-        ++document.getElementById("c-win").innerHTML;
-        ++document.getElementById("c-played").innerHTML;
-        ++document.getElementById("w-games").innerHTML;
-    } else if (gamescore<0) {
-        ++document.getElementById("c-played").innerHTML;
-        ++document.getElementById("l-games").innerHTML;
+    if (gamescore > 0) {
+        let win = parseInt(document.getElementById('c-win').innerText);
+        document.getElementById("c-win").innerHTML = ++win;
+        win = parseInt(document.getElementById('c-played').innerText);
+        document.getElementById("c-played").innerHTML = ++win;
+        win = parseInt(document.getElementById('w-game').innerText);
+        document.getElementById("w-game").innerHTML = ++win;
+    } else if (gamescore < 0) {
+        let loss = parseInt(document.getElementById('c-played').innerText);
+        document.getElementById("c-played").innerHTML = ++loss;
+        loss = parseInt(document.getElementById('l-game').innerText);
+        document.getElementById("l-game").innerHTML = ++loss;
     } else {
-        ++document.getElementById("c-played").innerHTML;
+        let loss = parseInt(document.getElementById('c-played').innerText);
+        document.getElementById("c-played").innerHTML = ++loss;
     }
-    let cSet = document.getElementById("c-win").innerHTML;
-    let cGame = document.getElementById("c-played").innerHTML;
-    let cDiff = cGame-cSet;
-    if (cDiff>=3) {
-        ++document.getElementById("l-set").innerHTML;
+    let cSet = parseInt(document.getElementById("c-win").innerText);
+    let cGame = parseInt(document.getElementById("c-played").innerText);
+    let cDiff = cGame - cSet;
+    console.log("diff"+cDiff);
+    if (cDiff >= 3) {
+        let loss = parseInt(document.getElementById("l-set").innerText);
+        document.getElementById("l-set").innerHTML = ++loss;
         document.getElementById("c-played").innerHTML = 0;
         document.getElementById("c-win").innerHTML = 0;
-    } else if (cSet>=3) {
-        ++document.getElementById("w-set").innerHTML;
+        
+        let sum = parseInt(document.getElementById("w-set").innerText);
+        let win = parseInt(document.getElementById("w-set").innerText); 
+        sum = sum + parseInt(document.getElementById("l-set").innerText);
+        document.getElementById("av-score").innerHTML = win / sum;
+    } else if (cSet >= 3) {
+        let win = parseInt(document.getElementById("w-set").innerText);
+        document.getElementById("w-set").innerHTML = ++win;
         document.getElementById("c-played").innerHTML = 0;
         document.getElementById("c-win").innerHTML = 0;
+        
+        let sum = parseInt(document.getElementById("w-set").innerText);
+        sum = sum + parseInt(document.getElementById("l-set").innerText);
+        document.getElementById("av-score").innerHTML = win/sum;
     } else if (cGame == 5) {
-        console.log("5 games found.")
+        console.log("5 games found.");
         document.getElementById("c-played").innerHTML = 0;
         document.getElementById("c-win").innerHTML = 0;
     } else {
-        console.log("undefined score condition...")
+        console.log("undefined score condition...");
     }
 }
 function pcHand(timeTaken) {
-    let handWeight = [document.getElementById("paper").innerHTML,
-        document.getElementById("scissor").innerHTML,
-        document.getElementById("rock").innerHTML,
-        document.getElementById("lizard").innerHTML,
-        document.getElementById("spock").innerHTML,
-        document.getElementById("wormhole").innerHTML,
-        document.getElementById("anykeybtn").innerHTML];
-    console.log(handWeight);
+    
     let drawOptions = drawHistory;
-    let pcHandRand = Math.ceil(Math.random()*drawOptions.length);
-    let draw = drawOptions[pcHand];
+    let pcHandRand = Math.ceil(Math.random() * drawOptions.length)-1;
+    console.log(pcHandRand)
+    let draw = drawOptions[pcHandRand];
     return draw;
 }
 function findWinner(player, pc) {
-    let playerStrength = document.getElementsByClassName(player + "-win").id;
-    let playerWins = 0;
+    let playerStrength = document.getElementsByClassName(player + "-win");
+    let playerWins = -1;
+    if (player===pc) {
+        playerWins = 0;
+    }
     for (let strength of playerStrength) {
-        if (strength === pc) {
+        if (strength.id === pc) {
             playerWins = 1;
         }
     }
 
-    let pcStrength = document.getElementsByClassName(pc + "-win").id;
-    let pcWins = 0;
-    for (let strength of pcStrength) {
-        if (strength === player) {
-            pcWins = 1;
-        }
-    }
-    scorePlayer = playerWins - pcWins;
+    scorePlayer = playerWins;
     return scorePlayer;
 }

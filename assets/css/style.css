@@ -67,9 +67,8 @@ header>div>div {
     display: inline-block;
 }
 .pc {
-    width: 30%;
-    text-align:center;
-    
+    width: 45%;
+    text-align: center;
 }
 .pc {
     padding: 5px 0px;
@@ -78,9 +77,25 @@ header>div>div {
     position: relative;
     top: 0px;
 }
+.your > div > span {
+    display: inline-block;
+}
+#inputTextField {
+    display: none;
+}
+.btn-playerid {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    color: black;
+}
+.fa-pen-to-square {
+    font-size: 16px;
+}
 .your {
-    text-align: justify;
-    width: 60%;
+    text-align: center;
+    width: 45%;
+
 }
 /* take silent class out when functional*/
 #hideplayer {

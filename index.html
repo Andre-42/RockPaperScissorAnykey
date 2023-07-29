@@ -34,22 +34,22 @@
                 <button data-type="stop" class="btn btn-stop" type="button">
 
                     <i class="fa-solid fa-circle-stop"></i>
-                    <p>stop playing</p>
+                    <p id="stop">stop playing</p>
 
                 </button>
             </div>
             <div>
                 <button data-type="anykey" class="btn btn-anykey" type="button">
-                    <p>ultimate </p>
+                    <p id="anykey">ultimate </p>
                     <img class="btn-anykeyicon" src="assets/images/AnyKey_2x2cm_2F4F4F.png" alt="anykey">
                 </button>
             </div>
             <div>
                 <a href="#rules">
-                    <button data-type="rules" class="btn btn-rules" type="button">
+                    <button data-type="the-rules" class="btn btn-rules" type="button">
 
                         <i class="fa-solid fa-section"></i>
-                        <p>rules</p>
+                        <p id="the-rules">rules</p>
 
                     </button>
                 </a>
@@ -57,18 +57,47 @@
 
         </div>
     </header>
+    <!-- Game space section -->
     <section id="gamespace">
-        <div class="pc hand">
-            <div>
-                <i class="fa-solid fa-user-secret"></i>
+        <div>
+
+            <!-- PC oponent -->
+            <div class="pc hand">
+                <div>
+                    <i class="fa-solid fa-user-secret"></i>
+                </div>
+                <br>
+                <div>
+                    <h4>Mister Smith</h4>
+                </div>
             </div>
-            <br>
-            <div class="gamehand">
-                <i class="fa-regular fa-hand-back-fist fa-shake"></i>
+
+            <div class="your hand">
+                <div>
+                    <i class="fa-solid fa-user-tie"></i>
+                </div>
+                <br>
+                <div>
+                    <span>
+                        <h4 id="playerid">Mister Anderson</h4>
+                        <input type="text" id="inputTextField" value="Mister Anderson">
+                    </span>
+
+                    <span id="hideplayer">
+                        <button data-type="playerid" class="btn btn-playerid" type="button">
+                            <i class="fa-solid fa-pen-to-square" id="player-name-save"></i>
+                        </button>
+                    </span>
+                </div>
             </div>
         </div>
-        <div class="your hand" id="hideplayer">
-            <i class="fa-solid fa-hand-sparkles"></i>
+        <div class="result">
+            <div class="gamehand pc">
+                <i class="fa-regular fa-hand-back-fist fa-shake"></i>
+            </div>
+            <div class="gamehand player">
+                <i class="fa-regular fa-hand-back-fist fa-shake"></i>
+            </div>
         </div>
         <div class="your hand" id="activeplayer">
             <button data-type="paper" class="gamehand btn">
@@ -198,13 +227,13 @@
                     <th>anykey</th>
                 </tr>
                 <tr>
-                    <td id="paper">0</td>
-                    <td id="scissor">0</td>
-                    <td id="rock">0</td>
-                    <td id="lizard">0</td>
-                    <td id="spock">0</td>
-                    <td id="wormhole">0</td>
-                    <td id="anykeybtn">0</td>
+                    <td id="paperNum">0</td>
+                    <td id="scissorNum">0</td>
+                    <td id="rockNum">0</td>
+                    <td id="lizardNum">0</td>
+                    <td id="spockNum">0</td>
+                    <td id="wormholeNum">0</td>
+                    <td id="anykeybtnNum">0</td>
                 </tr>
             </table>
         </div>
@@ -213,7 +242,7 @@
                 <tr>
                     <td id="lastActive">empty</td>
                     <td id="startTime">NaN</td>
-                    <td id="endTime">NaN</td> 
+                    <td id="endTime">NaN</td>
                 </tr>
             </table>
         </div>
