@@ -24,7 +24,7 @@ header>div>div {
 /* button design */
 .btn {
     background-color: floralwhite;
-    width: 300px;
+    width: 200px;
     height: 50px;
     padding: 1px;
     margin: 4px 2px;
@@ -95,7 +95,13 @@ header>div>div {
 .your {
     text-align: center;
     width: 45%;
-
+    
+}
+.your > i, img {
+    border-radius: 5px;
+}
+.pc > i, img {
+    border-radius: 5px;
 }
 .select {
     text-align: center;
@@ -139,6 +145,45 @@ header>div>div {
 #scoresheet {
     background-color:darkslategrey;
 }
+
+/* rule book */
+td > .fa-regular, img {
+    font-size: 1rem;
+    max-height: 16px;
+}
+
+/* footer */
 #tracker {
-    display: block;
+    display: none;
+}
+#timer {
+    display: none;
+}
+
+/* smartphone aspect ratio */
+@media (max-width: 420px) {
+    header {
+        font-size: smaller;
+    }
+    .btn {
+        width: 140px;
+    }
+    .gamehand {
+        height: 50px;
+        width: 50px;
+    }
+    .fa-regular {
+        font-size: 40px;
+    }
+    .noicon-showhand {
+        max-height: 40px;
+        position: relative;
+        bottom: 20px;
+    }
+    /* rule book */
+    td>.fa-regular,
+    img {
+        font-size: 1rem;
+        max-height: 16px;
+    }
 }

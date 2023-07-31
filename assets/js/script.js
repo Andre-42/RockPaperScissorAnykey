@@ -1,5 +1,8 @@
 // global variables
 var drawHistory = ["paper", "scissor", "rock", "lizard", "spock", "wormhole", "anykeybtn"];
+var winColor = ["goldenrod","1"];
+var loseColor = ["white","0.5"];
+var drawColor = ["white","1"];
 // event listeners
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -39,6 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
             } else {
                 console.log("register time");
                 endTime(lastActive);
+                shakeAgain(lastActive);
             }
         });
     }
@@ -181,18 +185,25 @@ function scoreHand(player) {
         document.getElementById("c-played").innerHTML = ++win;
         win = parseInt(document.getElementById('w-game').innerText);
         document.getElementById("w-game").innerHTML = ++win;
+
+        resultColor(winColor, loseColor);
     } else if (gamescore < 0) {
         let loss = parseInt(document.getElementById('c-played').innerText);
         document.getElementById("c-played").innerHTML = ++loss;
         loss = parseInt(document.getElementById('l-game').innerText);
         document.getElementById("l-game").innerHTML = ++loss;
+
+        resultColor(loseColor, winColor);
     } else {
         let loss = parseInt(document.getElementById('c-played').innerText);
         document.getElementById("c-played").innerHTML = ++loss;
+
+        resultColor(drawColor, drawColor);
     }
     let cSet = parseInt(document.getElementById("c-win").innerText);
     let cGame = parseInt(document.getElementById("c-played").innerText);
     let cDiff = cGame - cSet;
+    
     console.log("diff"+cDiff);
     if (cDiff >= 3) {
         let loss = parseInt(document.getElementById("l-set").innerText);
@@ -203,7 +214,8 @@ function scoreHand(player) {
         let sum = parseInt(document.getElementById("w-set").innerText);
         let win = parseInt(document.getElementById("w-set").innerText); 
         sum = sum + parseInt(document.getElementById("l-set").innerText);
-        document.getElementById("av-score").innerHTML = win / sum;
+        let avScore = Math.round((win / sum) * 10000) / 10000;
+        document.getElementById("av-score").innerHTML = avScore;
     } else if (cSet >= 3) {
         let win = parseInt(document.getElementById("w-set").innerText);
         document.getElementById("w-set").innerHTML = ++win;
@@ -212,7 +224,8 @@ function scoreHand(player) {
         
         let sum = parseInt(document.getElementById("w-set").innerText);
         sum = sum + parseInt(document.getElementById("l-set").innerText);
-        document.getElementById("av-score").innerHTML = win/sum;
+        let avScore = Math.round((win / sum)*10000)/10000;
+        document.getElementById("av-score").innerHTML = avScore;
     } else if (cGame == 5) {
         console.log("5 games found.");
         document.getElementById("c-played").innerHTML = 0;
@@ -241,7 +254,16 @@ function findWinner(player, pc) {
         }
     }
     if (player === "wormhole" || player === "anykeybtn") {
-        document.getElementById("showhand-player-img").src = document.getElementById("show-" + player).src;
+        if (player === "anykeybtn" && playerWins === 1) {
+            document.getElementById("showhand-player-img").src = "assets/images/AnyKey_2x2cm_DAA520.png";
+        } else {
+            document.getElementById("showhand-player-img").src = document.getElementById("show-" + player).src;
+        }
+        if (playerWins === -1) {
+            document.getElementById("showhand-player-img").style.opacity = 0.5;
+        } else {
+            document.getElementById("showhand-player-img").style.opacity = 1;
+        }
         document.getElementById("showhand-player-img").alt = document.getElementById("show-" + player).alt;
         document.getElementById("showhand-player").className = "";
     } else {
@@ -251,10 +273,21 @@ function findWinner(player, pc) {
         document.getElementById("showhand-player-img").alt = "";
     }
     if (pc === "wormhole" || pc === "anykeybtn") {
-        document.getElementById("showhand-pc-img").src = document.getElementById("show-" + pc).src;
+        if (pc === "anykeybtn" && playerWins === -1) {
+            document.getElementById("showhand-pc-img").src = "assets/images/AnyKey_2x2cm_DAA520.png";
+            document.getElementById("showhand-pc-img").style.opacity = 1;
+        } else {
+            document.getElementById("showhand-pc-img").src = document.getElementById("show-" + pc).src;
+            document.getElementById("showhand-pc-img").style.opacity = 1; 
+        }
+        if (playerWins === 1) {
+            document.getElementById("showhand-pc-img").style.opacity = 0.5;
+        } else {
+            document.getElementById("showhand-pc-img").style.opacity = 1;
+        }
         document.getElementById("showhand-pc-img").alt = document.getElementById("show-" + pc).alt;
         document.getElementById("showhand-pc").className = "";
-        } else {
+    } else {
         document.getElementById("showhand-pc").className = document.getElementById("show-" + pc).className;
         document.getElementById("showhand-pc-img").src = "";
         document.getElementById("showhand-pc-img").alt = "";
@@ -262,4 +295,28 @@ function findWinner(player, pc) {
     
     scorePlayer = playerWins;
     return scorePlayer;
+}
+function resultColor(playerColor,pcColor) {
+
+    document.getElementById("showhand-player").style.backgroundColor = playerColor[0];
+    document.getElementById("showhand-player-img").style.backgroundColor = document.getElementById("showhand-player").style.backgroundColor;
+    document.getElementById("showhand-player").style.opacity = playerColor[1];
+    document.getElementById("showhand-player-img").style.opacity = document.getElementById("showhand-player").style.opacity;
+
+    document.getElementById("showhand-pc").style.backgroundColor = pcColor[0];
+    document.getElementById("showhand-pc-img").style.backgroundColor = document.getElementById("showhand-player").style.backgroundColor;
+    document.getElementById("showhand-pc").style.opacity = pcColor[1];
+    document.getElementById("showhand-pc-img").style.backgroundColor = document.getElementById("showhand-player").style.opacity;
+}
+function shakeAgain(lastActive) {
+    //let checkHand = hoverButton === document.getElementById("lastActive").innerHTML;
+    //if (checkHand) {
+        document.getElementById("showhand-player").className = "fa-regular fa-hand-back-fist fa-shake";
+        document.getElementById("showhand-player-img").src = "";
+        document.getElementById("showhand-player-img").alt = "";
+
+        document.getElementById("showhand-pc").className = "fa-regular fa-hand-back-fist fa-shake";
+        document.getElementById("showhand-pc-img").src = "";
+        document.getElementById("showhand-pc-img").alt = "";
+    //}
 }
