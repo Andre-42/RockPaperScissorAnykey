@@ -240,7 +240,26 @@ function findWinner(player, pc) {
             playerWins = 1;
         }
     }
-
+    if (player === "wormhole" || player === "anykeybtn") {
+        document.getElementById("showhand-player-img").src = document.getElementById("show-" + player).src;
+        document.getElementById("showhand-player-img").alt = document.getElementById("show-" + player).alt;
+        document.getElementById("showhand-player").className = "";
+    } else {
+        let classIcon = document.getElementById("show-" + player).className;
+        document.getElementById("showhand-player").className = classIcon;
+        document.getElementById("showhand-player-img").src = "";
+        document.getElementById("showhand-player-img").alt = "";
+    }
+    if (pc === "wormhole" || pc === "anykeybtn") {
+        document.getElementById("showhand-pc-img").src = document.getElementById("show-" + pc).src;
+        document.getElementById("showhand-pc-img").alt = document.getElementById("show-" + pc).alt;
+        document.getElementById("showhand-pc").className = "";
+        } else {
+        document.getElementById("showhand-pc").className = document.getElementById("show-" + pc).className;
+        document.getElementById("showhand-pc-img").src = "";
+        document.getElementById("showhand-pc-img").alt = "";
+    }    
+    
     scorePlayer = playerWins;
     return scorePlayer;
 }

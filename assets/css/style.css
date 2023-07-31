@@ -122,6 +122,11 @@ header>div>div {
     font-size: 60px;
     font-weight: normal;
 }
+.noicon-showhand {
+    max-height: 60px;
+    position: relative;
+    bottom: 20px;
+}
 .noicon {
     position: relative;
     vertical-align:-webkit-baseline-middle;
