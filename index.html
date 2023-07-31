@@ -18,7 +18,7 @@
         <div>
             <h1>rockpaperscissorsAnykey</h1>
         </div>
-        <div>
+        <div class="select">
             <div>
                 <button data-type="playpause" class="btn btn-playpause" type="button">
 
@@ -92,14 +92,14 @@
             </div>
         </div>
         <div class="result">
-            <div class="gamehand pc">
-                <i class="fa-regular fa-hand-back-fist fa-shake"></i>
+            <div class="hand pc">
+                <i id="showhand-pc" class="fa-regular fa-hand-back-fist"></i>
             </div>
-            <div class="gamehand player">
-                <i class="fa-regular fa-hand-back-fist fa-shake"></i>
+            <div class="your hand">
+                <i id="showhand-player" class="fa-regular fa-hand-back-fist"></i>
             </div>
         </div>
-        <div class="your hand" id="activeplayer">
+        <div class="hand select" id="activeplayer">
             <button data-type="paper" class="gamehand btn">
                 <i class="fa-regular fa-hand"></i>
             </button>

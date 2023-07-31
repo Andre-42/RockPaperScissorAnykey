@@ -65,7 +65,7 @@ function runGame(todo) {
 
     } else if (tagfunc === "rules") {
         console.log("reading the rules");
-    } else if (tagfunc === "playerid") {
+    } else if (todo === "playerid") {
         playerId();
     } else {
         console.log("played " + todo);
@@ -83,6 +83,9 @@ function play() {
         document.getElementById("playpause").innerText = "pause";
         document.getElementById("hideplayer").style.display = "none";
         document.getElementById("activeplayer").style.display = "inline-block";
+
+        document.getElementById("showhand-player").className = "fa-regular fa-hand-back-fist fa-shake";
+        document.getElementById("showhand-pc").className = "fa-regular fa-hand-back-fist fa-shake";
     } else {
         console.log("Error: play-function");
     }
@@ -97,6 +100,9 @@ function pause() {
         document.getElementById("playpause").innerText = "play";
         document.getElementById("hideplayer").style.display = "inline-block";
         document.getElementById("activeplayer").style.display = "none";
+
+        document.getElementById("showhand-player").className = "fa-regular fa-hand-back-fist";
+        document.getElementById("showhand-pc").className = "fa-regular fa-hand-back-fist";
     } else {
         console.log("Error: pause function");
     }
@@ -115,6 +121,9 @@ function stop() {
     document.getElementById("l-game").innerHTML = 0;
     document.getElementById("w-set").innerHTML = 0;
     document.getElementById("l-set").innerHTML = 0;
+
+    document.getElementById("showhand-player").className = "fa-regular fa-hand-back-fist";
+    document.getElementById("showhand-pc").className = "fa-regular fa-hand-back-fist";
 }
 function anyKeyMode() {
     console.log("AnyKey mode enabled");
@@ -128,6 +137,8 @@ function playerId() {
     } else {
         document.getElementById("inputTextField").style.display = "none";
         document.getElementById("playerid").style.diaplay = "inline-block";
+        document.getElementById("player-name-save").className = "fa-solid fa-pen-to-square";
+        changePlayerName();
     }
 }
 function changePlayerName() {

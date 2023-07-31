@@ -97,6 +97,9 @@ header>div>div {
     width: 45%;
 
 }
+.select {
+    text-align: center;
+}
 /* take silent class out when functional*/
 #hideplayer {
     display: inline-block;
@@ -114,6 +117,7 @@ header>div>div {
     text-align: center;
     color: black;
 }
+
 .fa-regular {
     font-size: 60px;
     font-weight: normal;
