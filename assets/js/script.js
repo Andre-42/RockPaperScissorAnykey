@@ -155,22 +155,31 @@ function stop() {
 }
 function anyKeyMode() {
     console.log("AnyKey mode enabled");
-    ultimateKeyEnabled = true;
+    if (ultimateKeyEnabled) {
+        ultimateKeyEnabled = false;
+        document.getElementByClassNames("btn btn-anykey").backgroundColor = "floralwhite";
+    } else {
+        ultimateKeyEnabled = true;
+        document.getElementByClassNames("btn btn-anykey").backgroundColor = "cadetBlue";
+    }
+    
+    
+
 }
 function keyInputTranslate(selectedKey) {
     selectedKey = selectedKey.toLowerCase();
     let activity = "playpause";
-    if (selectedKey === "r") {
+    if (selectedKey === keyId[0]) {
         activity = "rock";
-    } else if (selectedKey === "p") {
+    } else if (selectedKey === keyId[1]) {
         activity = "paper";
-    } else if (selectedKey === "s") {
+    } else if (selectedKey === keyId[2]) {
         activity = "scissor";
-    } else if (selectedKey === "l") {
+    } else if (selectedKey === keyId[3]) {
         activity = "lizard";
-    } else if (selectedKey === "v") {
+    } else if (selectedKey === keyId[4]) {
         activity = "spock";
-    } else if (selectedKey === "x") {
+    } else if (selectedKey === keyId[5]) {
         activity = "wormhole";
     } else {
         activity = "anykeybtn";
@@ -179,23 +188,23 @@ function keyInputTranslate(selectedKey) {
 }
 
 function commitInput(idTag) {
-    let changedItem = document.getElementById(idTag).value;
+    changedItem = idTag.value;
     let selectedInput = NaN;
-    if (idTag === "input-rock-key") {
+    if (idTag.id === "input-rock-key") {
         selectedInput = 0;
-    } else if (idTag === "input-paper-key") {
+    } else if (idTag.id === "input-paper-key") {
         selectedInput = 1;
-    } else if (idTag === "input-scissor-key") {
+    } else if (idTag.id === "input-scissor-key") {
         selectedInput = 2;
-    } else if (idTag === "input-lizard-key") {
+    } else if (idTag.id === "input-lizard-key") {
         selectedInput = 3;
-    } else if (idTag === "input-spock-key") {
+    } else if (idTag.id === "input-spock-key") {
         selectedInput = 4;
-    } else if (idTag === "input-wormhole-key") {
+    } else if (idTag.id === "input-wormhole-key") {
         selectedInput = 5;
     }
     if (changedItem.length === 0 || changedItem.length > 1) {
-        document.getElementById(idTag).value = keyId[selectedInput];
+        document.getElementById(idTag.id).value = keyId[selectedInput];
     } else {
         let checkList = ["input-rock-key",
             "input-paper-key",
@@ -204,7 +213,7 @@ function commitInput(idTag) {
             "input-spock-key",
             "input-wormhole-key"];
         for (let keycheck of checkList) {
-            if (!(idTag === keycheck)) {
+            if (!(idTag.id === keycheck)) {
                 let valcheck = document.getElementById(keycheck).value;
                 if (valcheck === changedItem) {
                     document.getElementById(keycheck).value = keyId[selectedInput];
@@ -213,7 +222,7 @@ function commitInput(idTag) {
         }
         let i = 0;
         for (let keyset of checkList) {
-            keyId[i++] = document.getElementById(keycheck).value;
+            keyId[i++] = document.getElementById(keyset).value;
         }
     }
 }
