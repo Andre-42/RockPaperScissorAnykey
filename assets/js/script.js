@@ -3,6 +3,7 @@ var drawHistory = ["paper", "scissor", "rock", "lizard", "spock", "wormhole", "a
 var winColor = ["goldenrod","1"];
 var loseColor = ["white","0.5"];
 var drawColor = ["white","1"];
+var ultimateKeyEnabled = false;
 // event listeners
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -53,7 +54,15 @@ document.addEventListener("DOMContentLoaded", function () {
     //        checkAnswer();
     //    }
     //});
-
+    // create listener for keybord input
+    document.addEventListener("keydown",function (event) {
+        console.log(event.key)
+        if (ultimateKeyEnabled) {
+            todo = keyInputTranslate(event.key);
+            runGame(todo);
+        }
+        
+    })
     //runGame();
 });
 function runGame(todo) {
