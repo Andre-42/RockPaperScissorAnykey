@@ -175,8 +175,8 @@
                                 </td>
                                 <td>
                                     <input type="text" id="input-rock-key" value="r" maxlength="1" size="1">
-                                    <button data-type="playerid" class="btn btn-playerid" type="button">
-                                        <i class="fa-solid fa-pen-to-square" id="player-name-save"></i>
+                                    <button data-type="commit-key" class="btn btn-playerid" type="button">
+                                        <i class="fa-solid fa-pen-to-square"></i>
                                     </button>
                                 </td>
                             </tr>
@@ -190,8 +190,24 @@
                             </tr>
                             <tr>
                                 <td>
-                                    covers/disproves
+                                    <strong>paper</strong>
+                                </td>
+                                <td>
                                     <i class="fa-regular fa-hand"></i>
+                                </td>
+                                <td>
+                                    key:
+                                </td>
+                                <td>
+                                    <input type="text" id="input-paper-key" value="p" maxlength="1" size="1">
+                                    <button data-type="commit-key" class="btn btn-playerid" type="button">
+                                        <i class="fa-solid fa-pen-to-square"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    covers/disproves
                                 </td>
                                 <td class="paper-win" id="rock">rocks,</td>
                                 <td class="paper-win" id="wormhole">wormholes</td>
@@ -199,17 +215,49 @@
                             </tr>
                             <tr>
                                 <td>
-                                    scissor
+                                    <strong>scissor</strong>
+                                </td>
+                                <td>
                                     <i class="fa-regular fa-hand-scissors"></i>
                                 </td>
-                                <td class="scissor-win" id="anykeybtn">breaks any buttons,</td>
-                                <td class="scissor-win" id="paper">cuts paper</td>
+                                <td>
+                                    key:
+                                </td>
+                                <td>
+                                    <input type="text" id="input-scissor-key" value="s" maxlength="1" size="1">
+                                    <button data-type="commit-key" class="btn btn-playerid" type="button">
+                                        <i class="fa-solid fa-pen-to-square"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    cuts/breaks
+                                </td>
+                                <td class="scissor-win" id="anykeybtn">any buttons,</td>
+                                <td class="scissor-win" id="paper">paper</td>
                                 <td class="scissor-win" id="lizard">and lizardtails.</td>
                             </tr>
                             <tr>
                                 <td>
-                                    lizard
+                                    <strong>lizard</strong>
+                                </td>
+                                <td>
                                     <i class="fa-regular fa-hand-lizard"></i>
+                                </td>
+                                <td>
+                                    key:
+                                </td>
+                                <td>
+                                    <input type="text" id="input-lizard-key" value="l" maxlength="1" size="1">
+                                    <button data-type="commit-key" class="btn btn-playerid" type="button">
+                                        <i class="fa-solid fa-pen-to-square"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    beats or ...
                                 </td>
                                 <td class="lizard-win" id="paper">eats paper,</td>
                                 <td class="lizard-win" id="spock">poisons spock</td>
@@ -217,8 +265,24 @@
                             </tr>
                             <tr>
                                 <td>
-                                    spock
+                                    <strong>spock</strong>
+                                </td>
+                                <td>
                                     <i class="fa-regular fa-hand-spock"></i>
+                                </td>
+                                <td>
+                                    key:
+                                </td>
+                                <td>
+                                    <input type="text" id="input-spock-key" value="v" maxlength="1" size="1">
+                                    <button data-type="commit-key" class="btn btn-playerid" type="button">
+                                        <i class="fa-solid fa-pen-to-square"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    just...
                                 </td>
                                 <td class="spock-win" id="rock">lives of rocks,</td>
                                 <td class="spock-win" id="scissor">bends scissors</td>
@@ -226,17 +290,45 @@
                             </tr>
                             <tr>
                                 <td>
-                                    wormhole
+                                    <strong>wormhole</strong>
+                                </td>
+                                <td>
                                     <img src="assets/images/wormhole_5570657.png" alt="wormhole">
+                                </td>
+                                <td>
+                                    key:
+                                </td>
+                                <td>
+                                    <input type="text" id="input-wormhole-key" value="x" maxlength="1" size="1">
+                                    <button data-type="commit-key" class="btn btn-playerid" type="button">
+                                        <i class="fa-solid fa-pen-to-square"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    sucks in...
                                 </td>
                                 <td class="wormhole-win" id="rock">sucks in rocks,</td>
                                 <td class="wormhole-win" id="scissor">scissors</td>
                                 <td class="wormhole-win" id="anykeybtn">and any buttons.</td>
                             </tr>
+                            <td>
+                                <strong>any key</strong>
+                            </td>
+                            <td>
+                                <img src="assets/images/AnyKey_2x2cm.png" alt="anykey">
+                            </td>
+                            <td>
+                                key:
+                            </td>
+                            <td>
+                                ... just any key.
+                            </td>
+                            </tr>
                             <tr>
                                 <td>
-                                    anykey
-                                    <img src="assets/images/AnyKey_2x2cm.png" alt="anykey">
+                                    well...
                                 </td>
                                 <td class="anykeybtn-win" id="paper">rewrites papers,</td>
                                 <td class="anykeybtn-win" id="spock">confuses Spock</td>
