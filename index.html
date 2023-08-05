@@ -165,22 +165,37 @@
                         <table>
                             <tr>
                                 <td>
-                                    rock
-                                    <i class="fa-regular fa-hand-back-fist"></i>
-                                    
+                                    <strong>rock</strong>
                                 </td>
-                                <td class="rock-win" id="scissor">breaks scissors,</td>
-                                <td class="rock-win" id="anykeybtn">breaks any buttons</td>
-                                <td class="rock-win" id="lizard">and squashes lizards.</td>
+                                <td>
+                                    <i class="fa-regular fa-hand-back-fist"></i>
+                                </td>
+                                <td>
+                                    key:
+                                </td>
+                                <td>
+                                    <input type="text" id="input-rock-key" value="r" maxlength="1" size="1">
+                                    <button data-type="playerid" class="btn btn-playerid" type="button">
+                                        <i class="fa-solid fa-pen-to-square" id="player-name-save"></i>
+                                    </button>
+                                </td>
                             </tr>
                             <tr>
                                 <td>
-                                    paper
+                                    beats
+                                </td>
+                                <td class="rock-win" id="scissor">scissors,</td>
+                                <td class="rock-win" id="anykeybtn">any buttons</td>
+                                <td class="rock-win" id="lizard">and lizards.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    covers/disproves
                                     <i class="fa-regular fa-hand"></i>
                                 </td>
-                                <td class="paper-win" id="rock">covers rocks,</td>
+                                <td class="paper-win" id="rock">rocks,</td>
                                 <td class="paper-win" id="wormhole">wormholes</td>
-                                <td class="paper-win" id="spock">and disproves Spock.</td>
+                                <td class="paper-win" id="spock">and Spock.</td>
                             </tr>
                             <tr>
                                 <td>

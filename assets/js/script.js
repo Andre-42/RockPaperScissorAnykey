@@ -4,6 +4,7 @@ var winColor = ["goldenrod","1"];
 var loseColor = ["white","0.5"];
 var drawColor = ["white","1"];
 var ultimateKeyEnabled = false;
+var keyListenOn = false;
 // event listeners
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -57,11 +58,10 @@ document.addEventListener("DOMContentLoaded", function () {
     // create listener for keybord input
     document.addEventListener("keydown",function (event) {
         console.log(event.key)
-        if (ultimateKeyEnabled) {
+        if (ultimateKeyEnabled && keyListenOn) {
             todo = keyInputTranslate(event.key);
             runGame(todo);
         }
-        
     })
     //runGame();
 });
@@ -99,8 +99,11 @@ function play() {
 
         document.getElementById("showhand-player").className = "fa-regular fa-hand-back-fist fa-shake";
         document.getElementById("showhand-pc").className = "fa-regular fa-hand-back-fist fa-shake";
+
+        keyListenOn = true;
     } else {
         console.log("Error: play-function");
+        keyListenOn = false;
     }
 }
 function pause() {
@@ -116,12 +119,16 @@ function pause() {
 
         document.getElementById("showhand-player").className = "fa-regular fa-hand-back-fist";
         document.getElementById("showhand-pc").className = "fa-regular fa-hand-back-fist";
+
+        keyListenOn = false;
     } else {
         console.log("Error: pause function");
+        keyListenOn = false;
     }
 }
 function stop() {
     console.log("game finished");
+    keyListenOn = false;
     // reset play button
     document.getElementById("playicon").className = "fa-solid fa-circle-play";
     document.getElementById("playpause").innerText = "play";
@@ -140,7 +147,29 @@ function stop() {
 }
 function anyKeyMode() {
     console.log("AnyKey mode enabled");
+    ultimateKeyEnabled = true;
 }
+function keyInputTranslate(selectedKey) {
+    selectedKey = selectedKey.toLowerCase();
+    let activity = "playpause";
+    if (selectedKey === "r") {
+        activity = "rock";
+    } else if (selectedKey === "p") {
+        activity = "paper";
+    } else if (selectedKey === "s") {
+        activity = "scissor";
+    } else if (selectedKey === "l") {
+        activity = "lizard";
+    } else if (selectedKey === "v") {
+        activity = "spock";
+    } else if (selectedKey === "x") {
+        activity = "wormhole";
+    } else {
+        activity = "anykeybtn";
+    }
+    return activity;
+}
+
 function playerId() {
     getIcon = document.getElementById("player-name-save").className;
     if (getIcon === "fa-solid fa-pen-to-square") {

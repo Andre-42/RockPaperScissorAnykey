@@ -181,7 +181,7 @@ td > .fa-regular, img {
         bottom: 20px;
     }
     /* rule book */
-    td>.fa-regular,
+    td .fa-regular,
     img {
         font-size: 1rem;
         max-height: 16px;
