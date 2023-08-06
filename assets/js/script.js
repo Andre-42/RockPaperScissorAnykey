@@ -60,12 +60,13 @@ document.addEventListener("DOMContentLoaded", function () {
     // create listener for keybord input
     document.addEventListener("keydown", function (event) {
         console.log(document.getElementById(event.target.id).value);
-
+        console.log((ultimateKeyEnabled && keyListenOn))
         if (event.key === "Enter") {
             let findInputBox = document.getElementById(event.target.id);
             commitInput(findInputBox);
         } else if (ultimateKeyEnabled && keyListenOn) {
             todo = keyInputTranslate(event.key);
+            console.log(todo)
             runGame(todo);
         }
     });
@@ -76,6 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
 function runGame(todo) {
     console.log(todo);
     tagfunc = document.getElementById(todo).innerText;
+    console.log(tagfunc)
     if (tagfunc === "play") {
         play();
     } else if (tagfunc === "pause") {
@@ -83,7 +85,7 @@ function runGame(todo) {
     } else if (tagfunc === "stop playing") {
         stop();
     } else if (tagfunc === "ultimate") {
-
+        anyKeyMode();
     } else if (tagfunc === "rules") {
         console.log("reading the rules");
     } else if (todo === "playerid") {
@@ -157,10 +159,11 @@ function anyKeyMode() {
     console.log("AnyKey mode enabled");
     if (ultimateKeyEnabled) {
         ultimateKeyEnabled = false;
-        document.getElementByClassNames("btn btn-anykey").backgroundColor = "floralwhite";
+        document.getElementsByClassName("btn btn-anykey")[0].style.backgroundColor = "floralWhite";
+        
     } else {
         ultimateKeyEnabled = true;
-        document.getElementByClassNames("btn btn-anykey").backgroundColor = "cadetBlue";
+        document.getElementsByClassName("btn btn-anykey")[0].style.backgroundColor = "cadetBlue";
     }
     
     
@@ -184,6 +187,7 @@ function keyInputTranslate(selectedKey) {
     } else {
         activity = "anykeybtn";
     }
+    console.log(activity)
     return activity;
 }
 
@@ -329,11 +333,39 @@ function scoreHand(player) {
     }
 }
 function pcHand(timeTaken) {
-
+    let bestChance;
+    if (ultimateKeyEnabled) {
+        let lastSelected = document.getElementById("lastActive").innerHTML;
+        let dontChoose = document.getElementsByClassName(lastSelected + "-win");
+        let sumChance = [lastSelected];
+        
+        for (let looseItem of dontChoose) {
+            for (let handOption of keyName) {
+                if (!(looseItem.id === handOption)) {
+                    sumChance.push(handOption);
+                }
+            }
+        }
+        
+        let sumChanceId = Math.ceil(Math.random() * sumChance.length) - 1;
+        bestChance = sumChance[sumChanceId];
+    }
     let drawOptions = drawHistory;
+    if (timeTaken > 0.5) {
+        drawOptions.push(bestChance[0]);
+    }
+    
     let pcHandRand = Math.ceil(Math.random() * drawOptions.length) - 1;
     console.log(pcHandRand);
     let draw = drawOptions[pcHandRand];
+
+    if (ultimateKeyEnabled) {
+        drawHistory.push(bestChance[0]);
+        if (drawHistory.length>=100) {
+            drawHistory = keyName.push(drawHistory.slice(-94));
+        }
+    }
+    console.log(drawHistory);
     return draw;
 }
 function findWinner(player, pc) {
