@@ -162,6 +162,12 @@ header>div>div {
 }
 
 /* rule book */
+#phone {
+    display: none;
+}
+#wideview {
+    display: inline-block;
+}
 #rules {
     background-color: rgba(249, 246, 238, .7);
     /*background: background: url('../images/rock-paper-scissors-2-1241086.jpg') no-repeat center center;*/
@@ -205,7 +211,13 @@ td > .fa-regular, img {
         bottom: 20px;
     }
     /* rule book */
-    td .fa-regular,
+    #phone {
+        display: inline-block;
+    }
+    #wideview {
+        display: none;
+    }
+        td .fa-regular,
     img {
         font-size: 1rem;
         max-height: 16px;
