@@ -25,9 +25,12 @@ header > div {
 }
 
 /* button design */
+.btn-size {
+    width: 40vw;
+}
 .btn {
     background-color: floralwhite;
-    width: 130px;
+    width: 150px;
     height: 50px;
     padding: 1px;
     margin: 4px 2px;
