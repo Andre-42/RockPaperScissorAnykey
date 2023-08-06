@@ -10,12 +10,12 @@ body {
     font-family: Verdana, "Times New Roman";
 }
 header {
-    margin-top: 0 px;
+    margin-top: 0px;
     padding: 20px 10px;
 }
 .headerfooter {
     background-color: darkslategrey;
-    background-image: '../images/rockpaperscissors-bw.jpg' no-repeat center center;
+    background-image: '../images/rockpaperscissor-bw.jpg' no-repeat center center;
     color: ghostwhite;
 }
 header > div + div{
@@ -157,7 +157,6 @@ header>div>div {
 /* score sheet */
 #scoresheet {
     background-color:darkslategrey;
-    text-alignment: center;
     color: rgba(249, 246, 238,1);
 }
 
@@ -175,7 +174,7 @@ header>div>div {
 
 #rules > h2, div {
     margin-top: 0px;
-    padding: 10px 20 px;
+    padding: 10px 20px;
 }
 td > .fa-regular, img {
     font-size: 1rem;
