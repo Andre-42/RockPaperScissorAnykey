@@ -1,39 +1,29 @@
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
+## Rock, Paper, Scissors ... any key
+
 Welcome,
 
-This is the Code Institute student template for Codeanywhere. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+This is my second project at the code institute. The core of this project is the java script functionalization of a front-end website. For this reason I chose the game "rock, paper, scissors, spock". However I put a little twist on it and added the "any key" move. As pretty much everybody knows the phrase: "Press any key to continue."
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **May 11th, 2023**
+## Design & features
 
-## Codeanywhere Reminders
+The website is useable in all formats and adjusts to the screen size.
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+The header is made up of the primary headline of the website and the most important buttons, like play, pause, stop, ultimate anykey and a link to the rules section.
 
-`python3 -m http.server`
+The next section holds the actual play feature.
+Here you are able to write down your name and play against a computer player. Once you press the play button in the header you are able to play by clicking on the icons that just poped up. You can pause at anytime by pressing the pause button in the header. The ultimate anykey button will ramp up the stacks by allowing the pc player to not just play random but anticipate your next move by learning from your previous behaviour.
+If you have played to your hearts content and want to stop, press stop in the header and the website is set back to zero. Meaning you can start fresh.
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+The next small section holds a small score sheet which tracks your stats while you play. It counts wins and loses as well as how many sets (3 out of 5 wins/loses) you played.
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+The Next section explains the rules. Here you can also change the keyboard settings for each symbol. Since the anykey button allows for keyboard use addityional to mouse clicks.
 
-`http_server`
+At the bottom you will also find a small footer where you can find some links to facebook, LinkedIN and Github. However, only Github actually goes further than the websites homepage.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+The footer has a hidden segment where your progress is recoreded during the game in order to run all the functions with as little  global variables as possible.
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+## Tests
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
----
-
-Happy coding!
+I've tested the code for html, css and javascript.
