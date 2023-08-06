@@ -163,13 +163,13 @@ header>div>div {
 
 /* rule book */
 #rules {
-    background: background: url('../images/rock-paper-scissors-2-1241086.jpg') no-repeat center center;
+    background-color: rgba(249, 246, 238, .7);
+    /*background: background: url('../images/rock-paper-scissors-2-1241086.jpg') no-repeat center center;*/
 }
 
 #rules > h2, div {
     margin-top: 0px;
     padding: 10px 20 px;
-    background-color: rgba(249, 246, 238, .7);
 }
 td > .fa-regular, img {
     font-size: 1rem;
