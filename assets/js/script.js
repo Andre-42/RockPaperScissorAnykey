@@ -49,7 +49,10 @@ document.addEventListener("DOMContentLoaded", function () {
  * The main game function, called when the player starts playing. This function controls the play mode asignments
  */
 function runGame(todo) {
-    tagfunc = document.getElementById(todo).innerText;
+    tagfunc = "-";
+    if ((todo === "playpause") || (todo === "stop") || (todo === "anykey") || (todo === "rules")) {
+        tagfunc = document.getElementById(todo).innerText;
+    }
     if (tagfunc === "play") {
         play();
     } else if (tagfunc === "pause") {
