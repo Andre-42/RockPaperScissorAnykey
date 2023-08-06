@@ -62,6 +62,17 @@ function runGame(todo) {
         console.log("reading the rules");
     } else if (todo === "playerid") {
         playerId();
+    } else if (todo === "commit-key") {
+        let checkList = ["input-rock-key",
+            "input-paper-key",
+            "input-scissor-key",
+            "input-lizard-key",
+            "input-spock-key",
+            "input-wormhole-key"];
+        for (let inputItem of checkList) {
+            let findInputBox = document.getElementById(inputItem);
+            commitInput(findInputBox);
+        }
     } else {
         // players hand selection: console.log("played " + todo);
         scoreHand(todo);
