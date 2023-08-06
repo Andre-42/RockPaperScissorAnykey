@@ -219,10 +219,12 @@ function playerId() {
         document.getElementById("inputTextField").style.display = "inline-block";
         document.getElementById("playerid").style.diaplay = "none";
         document.getElementById("player-name-save").className = "fa-solid fa-floppy-disk";
+        document.getElementById("player-name-save").style.fontSize = "16px";
     } else {
         document.getElementById("inputTextField").style.display = "none";
         document.getElementById("playerid").style.diaplay = "inline-block";
         document.getElementById("player-name-save").className = "fa-solid fa-pen-to-square";
+        document.getElementById("player-name-save").style.fontSize = "16px";
         changePlayerName();
     }
 }
