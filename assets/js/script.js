@@ -344,14 +344,14 @@ function pcHand(timeTaken) {
     let drawOptions = drawHistory;
     // time dependant decision if the user is to slow the pc will find out and update its choice
     if (timeTaken > 0.5 && ultimateKeyEnabled) {
-        drawOptions.push(bestChance[0]);
+        drawOptions.push(bestChance);
     }
     // random selector for pc
     let pcHandRand = Math.ceil(Math.random() * drawOptions.length) - 1;
     let draw = drawOptions[pcHandRand];
     // user reaction is remembered for the next moves
     if (ultimateKeyEnabled) {
-        drawHistory.push(bestChance[0]);
+        drawHistory.push(bestChance);
         if (drawHistory.length>=100) {
             drawHistory = keyName.push(drawHistory.slice(-94));
         }
