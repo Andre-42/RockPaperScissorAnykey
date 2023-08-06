@@ -26,7 +26,7 @@ header > div {
 /* button design */
 .btn {
     background-color: floralwhite;
-    width: 150px;
+    width: 130px;
     height: 50px;
     padding: 1px;
     margin: 4px 2px;
@@ -55,6 +55,9 @@ header > div {
     top: -15px;
     display: inline-block;
     vertical-align: -webkit-baseline-middle;
+}
+.btn > div > div {
+    
 }
 .btn-anykey > div {
     top: -25px; 
