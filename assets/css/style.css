@@ -18,13 +18,9 @@ header {
     background-color: darkslategrey;
     color: ghostwhite;
 }
-header > div + div{
-    text-align:justify;
-    vertical-align: -webkit-baseline-middle;
-}
-header>div>div {
+header > div {
     display: inline-block;
-    vertical-align: -webkit-baseline-middle;
+    position: relative;
 }
 
 /* button design */
