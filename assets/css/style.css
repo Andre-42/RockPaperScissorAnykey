@@ -1,7 +1,8 @@
 /* general style */
 body {
     background-color: white;
-    background-image: "assets/images/rock-paper-scissors-2-1241086.jpg";
+    /*background-image: "assets/images/rock-paper-scissors-2-1241086.jpg";*/
+    background: url('../images/rock-paper-scissors-2-1241086.jpg') no-repeat center center;
     color: black;
     margin: 0px;
     padding: 0px;
@@ -11,7 +12,7 @@ body {
 
 .headerfooter {
     background-color: darkslategrey;
-    background-image: "assets/images/rockpaperscissors-bw.jpg";
+    background-image: '../images/rockpaperscissors-bw.jpg' no-repeat center center;
     color: ghostwhite;
 }
 header > div + div{
@@ -67,6 +68,7 @@ header>div>div {
 /* game area design */
 .hand {
     display: inline-block;
+    background-color: rgba(249, 246, 238, .7);
 }
 .pc {
     width: 45%;
@@ -146,6 +148,8 @@ header>div>div {
 /* score sheet */
 #scoresheet {
     background-color:darkslategrey;
+    text-alignment: center;
+    color: rgba(249, 246, 238,1);
 }
 
 /* rule book */
