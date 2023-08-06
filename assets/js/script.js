@@ -136,6 +136,7 @@ function stop() {
 function anyKeyMode() {
     if (ultimateKeyEnabled) {
         ultimateKeyEnabled = false;
+        drawHistory = keyName;
         document.getElementsByClassName("btn btn-anykey")[0].style.backgroundColor = "floralWhite";
         
     } else {
