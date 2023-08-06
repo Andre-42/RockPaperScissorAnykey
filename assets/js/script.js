@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
             let findInputBox = document.getElementById(event.target.id);
             commitInput(findInputBox);
         } else if (ultimateKeyEnabled && keyListenOn) {
-            todo = keyInputTranslate(event.key);
+            let todo = keyInputTranslate(event.key);
             runGame(todo);
         }
     });
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
  * The main game function, called when the player starts playing. This function controls the play mode asignments
  */
 function runGame(todo) {
-    tagfunc = "-";
+    let tagfunc = "-";
     if ((todo === "playpause") || (todo === "stop") || (todo === "anykey") || (todo === "rules")) {
         tagfunc = document.getElementById(todo).innerText;
     }
@@ -85,7 +85,7 @@ function runGame(todo) {
  * This function changes the play pause button design.
  */
 function play() {
-    currentText = document.getElementById("playicon").className;
+    let currentText = document.getElementById("playicon").className;
     if (currentText === "fa-solid fa-circle-play") {
         // change button to pause mode availability
         document.getElementById("playicon").className = "fa-solid fa-pause";
@@ -106,7 +106,7 @@ function play() {
  * This function provides the reverse action to play()
  */
 function pause() {
-    currentText = document.getElementById("playicon").className;
+    let currentText = document.getElementById("playicon").className;
     if (currentText === "fa-solid fa-pause") {
         document.getElementById("playicon").className = "fa-solid fa-circle-play";
         document.getElementById("playpause").innerText = "play";
@@ -179,14 +179,13 @@ function keyInputTranslate(selectedKey) {
     } else {
         activity = "anykeybtn";
     }
-    console.log(activity)
     return activity;
 }
 /**
 * This function allows keyboard adjustments within rules section
 **/
 function commitInput(idTag) {
-    changedItem = idTag.value;
+    let changedItem = idTag.value;
     let selectedInput = NaN;
     if (idTag.id === "input-rock-key") {
         selectedInput = 0;
@@ -211,7 +210,7 @@ function commitInput(idTag) {
             "input-spock-key",
             "input-wormhole-key"];
         for (let keycheck of checkList) {
-            if (!(idTag.id === keycheck)) {
+            if ((idTag.id !== keycheck)) {
                 let valcheck = document.getElementById(keycheck).value;
                 if (valcheck === changedItem) {
                     document.getElementById(keycheck).value = keyId[selectedInput];
@@ -228,7 +227,7 @@ function commitInput(idTag) {
 * Changes the name tag assembly for the player between edit- and display-mode
 **/
 function playerId() {
-    getIcon = document.getElementById("player-name-save").className;
+    let getIcon = document.getElementById("player-name-save").className;
     if (getIcon === "fa-solid fa-pen-to-square") {
         document.getElementById("inputTextField").style.display = "inline-block";
         document.getElementById("playerid").style.diaplay = "none";
@@ -349,7 +348,7 @@ function pcHand(timeTaken) {
         // select winning moves to user input
         for (let looseItem of dontChoose) {
             for (let handOption of keyName) {
-                if (!(looseItem.id === handOption)) {
+                if ((looseItem.id !== handOption)) {
                     sumChance.push(handOption);
                 }
             }
@@ -429,7 +428,7 @@ function findWinner(player, pc) {
         document.getElementById("showhand-pc-img").src = "";
         document.getElementById("showhand-pc-img").alt = "";
     }
-    scorePlayer = playerWins;
+    let scorePlayer = playerWins;
     return scorePlayer;
 }
 /**
