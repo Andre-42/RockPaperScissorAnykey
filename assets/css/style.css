@@ -1,6 +1,7 @@
 /* general style */
 body {
     background-color: white;
+    background-image: "assets/images/rock-paper-scissors-2-1241086.jpg";
     color: black;
     margin: 0px;
     padding: 0px;
@@ -10,6 +11,7 @@ body {
 
 .headerfooter {
     background-color: darkslategrey;
+    background-image: "assets/images/rockpaperscissors-bw.jpg";
     color: ghostwhite;
 }
 header > div + div{
