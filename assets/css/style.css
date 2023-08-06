@@ -9,7 +9,10 @@ body {
 
     font-family: Verdana, "Times New Roman";
 }
-
+header {
+    margin-top: 0 px;
+    padding: 20px 10px;
+}
 .headerfooter {
     background-color: darkslategrey;
     background-image: '../images/rockpaperscissors-bw.jpg' no-repeat center center;
@@ -153,6 +156,15 @@ header>div>div {
 }
 
 /* rule book */
+#rules {
+    background: background: url('../images/rock-paper-scissors-2-1241086.jpg') no-repeat center center;
+}
+
+#rules > h2, div {
+    margin-top: 0px;
+    padding: 10px 20 px;
+    background-color: rgba(249, 246, 238, .7);
+}
 td > .fa-regular, img {
     font-size: 1rem;
     max-height: 16px;
