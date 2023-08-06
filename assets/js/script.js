@@ -343,7 +343,7 @@ function pcHand(timeTaken) {
     }
     let drawOptions = drawHistory;
     // time dependant decision if the user is to slow the pc will find out and update its choice
-    if (timeTaken > 0.5) {
+    if (timeTaken > 0.5 && ultimateKeyEnabled) {
         drawOptions.push(bestChance[0]);
     }
     // random selector for pc
