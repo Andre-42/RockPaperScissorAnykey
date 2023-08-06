@@ -6,16 +6,16 @@ body {
     color: black;
     margin: 0px;
     padding: 0px;
-
+    max-width: 100wv;
     font-family: Verdana, "Times New Roman";
 }
 header {
     margin-top: 0px;
     padding: 20px 10px;
+    max-width: inherit;
 }
 .headerfooter {
     background-color: darkslategrey;
-    background-image: '../images/rockpaperscissor-bw.jpg' no-repeat center center;
     color: ghostwhite;
 }
 header > div + div{
@@ -54,13 +54,13 @@ header>div>div {
     display: inline-block;
 }
 
-.btn>p {
+.btn>div {
     position: relative;
     top: -15px;
     display: inline-block;
     vertical-align: -webkit-baseline-middle;
 }
-.btn-anykey > p {
+.btn-anykey > div {
     top: -25px;
     
 }
