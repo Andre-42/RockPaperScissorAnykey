@@ -50,13 +50,13 @@ header > div {
     display: inline-block;
 }
 
-div > .btn {
+header > div {
     position: relative;
     top: -15px;
     display: inline-block;
     vertical-align: -webkit-baseline-middle;
 }
-div > div > .btn{
+header > div > div{
     
 }
 .btn-anykey > div {
