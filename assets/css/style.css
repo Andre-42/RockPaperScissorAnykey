@@ -103,7 +103,7 @@ header>div>div {
     background-color: white;
     color: black;
 }
-.fa-pen-to-square {
+#player-name-save {
     font-size: 16px;
 }
 .your {
@@ -209,6 +209,13 @@ td > .fa-regular, img {
         max-height: 40px;
         position: relative;
         bottom: 20px;
+    }
+    .btn-playerid {
+        width: 20px;
+        height: 20px;
+    }
+    #player-name-save {
+        font-size: 16px;
     }
     /* rule book */
     #phone {
