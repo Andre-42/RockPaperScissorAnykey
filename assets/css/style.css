@@ -15,6 +15,9 @@ header {
     padding: 0px 10px;/*20px 10px;*/
     max-width: inherit;
 }
+/*div {
+    padding: 0px;
+}*/
 .headerfooter {
     background-color: darkslategrey;
     color: ghostwhite;
@@ -86,8 +89,9 @@ header > div > div{
 }
 
 /* game area design */
-.gamespace {
-    background-color: rgba(249, 246, 238, .7);
+#gamespace {
+    background-color: #f9f6eeb3;
+    padding: 5px 2px;
 }
 .hand {
     display: inline-block; 
@@ -100,13 +104,17 @@ header > div > div{
     width: 45%;
     text-align: center;
 }
-.pc {
+div.pc {
     padding: 5px 0px;
+    position: absolute;
+    top: 240px;
+    left: 5px;
+    width: 48%;
 }
-.pc > div{
+/*.pc > div{
     position: relative;
     top: 0px;
-}
+}*/
 .your > div > span {
     display: inline-block;
 }
@@ -187,7 +195,7 @@ header > div > div{
     /*background: background: url('../images/rock-paper-scissors-2-1241086.jpg') no-repeat center center;*/
 }
 
-#rules > h2, div {
+#rules > h2 {
     margin-top: 0px;
     padding: 10px 20px;
 }
