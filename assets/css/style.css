@@ -201,7 +201,11 @@ div.your {
 #scoresheet {
     background-color:darkslategrey;
     color: rgba(249, 246, 238,1);
+    position: absolute;
+    width: 100%;
+    padding: 0px 5px;
 }
+
 
 /* rule book */
 #phone {
@@ -259,6 +263,9 @@ td > .fa-regular, img {
     }
     #player-name-save {
         font-size: 16px;
+    }
+    #scoresheet > div {
+        font-size: 14px;
     }
     /* rule book */
     #phone {
