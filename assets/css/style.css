@@ -164,6 +164,9 @@ div.your {
 }
 #activeplayer {
     display: none;
+    position:absolute;
+    top: 380px;
+    width: 100%;
 }
 .gamehand {
     vertical-align:-webkit-baseline-middle;
@@ -179,14 +182,16 @@ div.your {
     font-size: 60px;
     font-weight: normal;
 }
-.noicon-showhand {
-    max-height: 60px;
-    position: relative;
-    bottom: 20px;
-}
+
 .noicon {
     position: relative;
     vertical-align:-webkit-baseline-middle;
+}
+.noicon-showhand {
+    max-height: 60px;
+    position: absolute;
+    top: 0px;
+    left: 38%;
 }
 .gamehand > img {
     max-height: 100%;
@@ -247,8 +252,6 @@ td > .fa-regular, img {
     }
     .noicon-showhand {
         max-height: 40px;
-        position: relative;
-        bottom: 20px;
     }
     .btn-playerid {
         width: 20px;
@@ -267,5 +270,5 @@ td > .fa-regular, img {
         td .fa-regular,img {
         font-size: 1rem;
         max-height: 16px;
-    }*/
+    }
 }
