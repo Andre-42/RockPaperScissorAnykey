@@ -90,7 +90,7 @@ header > div > div{
 
 /* game area design */
 #gamespace {
-    background-color: #f9f6eeb3;
+    background-color: floralwhite;;
     padding: 5px 2px;
     height: 300px;
 }
@@ -130,7 +130,7 @@ div.your {
 .btn-playerid {
     width: 20px;
     height: 20px;
-    background-color: white;
+    background-color: floralwhite;;
     color: black;
 }
 #player-name-save {
@@ -240,7 +240,19 @@ td > .fa-regular, img {
 #timer {
     display: none;
 }
-
+footer {
+    position: relative;
+    top: 120px;
+    height: 50px;
+    padding: 10px 5px;
+}
+.social-networks > a {
+    text-decoration: none;
+    color: floralwhite;
+}
+.social-networks {
+    padding-right: 20px;
+}
 /* smartphone aspect ratio */
 @media (max-width: 420px) {
     header {
