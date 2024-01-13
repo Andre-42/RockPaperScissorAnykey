@@ -263,7 +263,14 @@ footer {
 .social-networks {
     padding-right: 20px;
 }
+
 /* smartphone aspect ratio */
+@media (orientation: portrait) {
+    #scoresheet {
+        width: 66%;
+        left: 0px;
+    }
+}
 @media (max-width: 420px) {
     header {
         font-size: smaller;
