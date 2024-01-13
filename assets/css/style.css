@@ -22,6 +22,10 @@ header {
 header > div {
     display: inline-block;
     position: relative;
+    padding: 0px;
+}
+.btn-size {
+    padding: 0px;
 }
 
 /* button design */
@@ -61,7 +65,13 @@ header > div {
     vertical-align: -webkit-baseline-middle;
 }
 header > div > div{
-    
+    display:inline-block;
+    padding:0px;
+    height:85px;
+}
+.btn-rules > a {
+    text-decoration: none;
+    color: darkslategray;
 }
 .btn-anykey > div {
     top: -25px; 
