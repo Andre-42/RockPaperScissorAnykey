@@ -92,24 +92,30 @@ header > div > div{
 #gamespace {
     background-color: #f9f6eeb3;
     padding: 5px 2px;
+    height: 300px;
 }
 .hand {
     display: inline-block; 
-    width: 98vw;
+    padding: 5px 0px;
+    
 }
 .select {
     width: 90vw;
 }
-.pc {
-    width: 45%;
-    text-align: center;
-}
+   
 div.pc {
-    padding: 5px 0px;
     position: absolute;
     top: 240px;
     left: 5px;
     width: 48%;
+    text-align: center;
+}
+div.your {
+    position: absolute;
+    top: 240px;
+    right: 5px;
+    width: 48%;
+    text-align: center;
 }
 /*.pc > div{
     position: relative;
@@ -130,10 +136,7 @@ div.pc {
 #player-name-save {
     font-size: 16px;
 }
-.your {
-    text-align: center;
-    width: 45%;
-}
+
 .your > i, img {
     border-radius: 5px;
 }
@@ -145,7 +148,13 @@ div.pc {
 }
 /* take silent class out when functional*/
 #hideplayer {
-    display: inline-block;
+    display:inline-block;
+}
+.change-player-name {
+    position: absolute;
+    top: 10px;
+    right: 20%;
+    z-index: 999;
 }
 #activeplayer {
     display: none;
