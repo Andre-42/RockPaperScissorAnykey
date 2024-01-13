@@ -156,6 +156,12 @@ div.your {
     right: 20%;
     z-index: 999;
 }
+.result {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    left: -10%;
+}
 #activeplayer {
     display: none;
 }
