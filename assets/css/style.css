@@ -12,7 +12,7 @@ body {
 }
 header {
     margin-top: 0px;
-    padding: 0px 10px;/*20px 10px;*/
+    padding: 0px 0px;/*20px 10px;*/
     max-width: inherit;
 }
 /*div {
@@ -33,7 +33,7 @@ header > div {
 
 /* button design */
 .btn-size {
-    width: 40vw;
+    width: 22%;/*40vw;*/
 }
 .btn {
     background-color: floralwhite;
@@ -100,7 +100,7 @@ header > div > div{
     
 }
 .select {
-    width: 90vw;
+    width: 100%;/*90vw;*/
 }
    
 div.pc {
@@ -173,7 +173,7 @@ div.your {
     height: 75px;
     width: 75px;
     display: inline-block;
-    padding: 5px 5px;
+    padding: 5px 0px;
     text-align: center;
     color: black;
 }
@@ -193,6 +193,16 @@ div.your {
     top: 0px;
     left: 38%;
 }
+#showhand-pc {
+    position: absolute;
+    top: 0px;
+    left: 38%;
+}
+#showhand-player {
+    position: absolute;
+    top: 0px;
+    left: 38%;
+}
 .gamehand > img {
     max-height: 100%;
 }
@@ -202,8 +212,8 @@ div.your {
     background-color:darkslategrey;
     color: rgba(249, 246, 238,1);
     position: absolute;
-    width: 100%;
-    padding: 0px 5px;
+    width: 30%;
+    padding: 0px 0px;
     height: 125px;
 }
 
@@ -220,7 +230,7 @@ div.your {
     /*background: background: url('../images/rock-paper-scissors-2-1241086.jpg') no-repeat center center;*/
     position: relative;
     top: 130px;
-    padding: 0px 5px;
+    padding: 0px 0px;
 }
 
 #rules > h2 {
@@ -264,6 +274,9 @@ footer {
     .btn {
         width: 140px;
     }
+    .btn-size {
+        width: 40vw;
+    }
     .gamehand {
         height: 50px;
         width: 50px;
@@ -281,6 +294,10 @@ footer {
     #player-name-save {
         font-size: 16px;
     }
+    #scoresheet {
+        width: 100%;
+        left: 0px;
+    }
     #scoresheet > div {
         font-size: 14px;
     }
@@ -297,5 +314,11 @@ footer {
         td .fa-regular,img {
         font-size: 1rem;
         max-height: 16px;
+    }
+}
+@media (max-height: 420px) {
+    #scoresheet {
+        width: 66%;
+        left: 0px;
     }
 }
