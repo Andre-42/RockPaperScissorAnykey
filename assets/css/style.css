@@ -12,7 +12,7 @@ body {
 }
 header {
     margin-top: 0px;
-    padding: 20px 10px;
+    padding: 0px 10px;/*20px 10px;*/
     max-width: inherit;
 }
 .headerfooter {
@@ -60,14 +60,14 @@ header > div {
 
 header > div {
     position: relative;
-    top: -15px;
+    /*top: -15px;*/
     display: inline-block;
     vertical-align: -webkit-baseline-middle;
 }
 header > div > div{
     display:inline-block;
     padding:0px;
-    height:85px;
+    height:60px;
 }
 .btn-rules > a {
     text-decoration: none;
@@ -79,6 +79,12 @@ header > div > div{
 .fa-solid {
     font-size: 40px;
 }
+
+.btn-index-img {
+    height:30px;
+    font-size: 35px;
+}
+
 /* game area design */
 .gamespace {
     background-color: rgba(249, 246, 238, .7);
@@ -202,6 +208,9 @@ td > .fa-regular, img {
 @media (max-width: 420px) {
     header {
         font-size: smaller;
+        text-align: center;
+        height:232px;
+        
     }
     .btn {
         width: 140px;
@@ -232,9 +241,8 @@ td > .fa-regular, img {
     #wideview {
         display: none;
     }
-        td .fa-regular,
-    img {
+        td .fa-regular,img {
         font-size: 1rem;
         max-height: 16px;
-    }
+    }*/
 }
