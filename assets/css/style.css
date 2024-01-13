@@ -204,6 +204,7 @@ div.your {
     position: absolute;
     width: 100%;
     padding: 0px 5px;
+    height: 125px;
 }
 
 
@@ -217,11 +218,15 @@ div.your {
 #rules {
     background-color: rgba(249, 246, 238, .7);
     /*background: background: url('../images/rock-paper-scissors-2-1241086.jpg') no-repeat center center;*/
+    position: relative;
+    top: 130px;
+    padding: 0px 5px;
 }
 
 #rules > h2 {
     margin-top: 0px;
     padding: 10px 20px;
+
 }
 td > .fa-regular, img {
     font-size: 1rem;
@@ -270,6 +275,9 @@ td > .fa-regular, img {
     /* rule book */
     #phone {
         display: inline-block;
+    }
+    .list-edit-icon {
+        font-size: 16px;
     }
     #wideview {
         display: none;
