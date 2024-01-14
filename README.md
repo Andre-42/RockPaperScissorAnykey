@@ -54,6 +54,13 @@ This can include features like randomized button configuration (placement and si
 
 ### Color Scheme
 
+Back in the 90s, keyboards were pretty dull. I wanted to capture that vibe in the appearacne of the game. So I chose a relatively simple and contrasting dull color scheme. The palette was created at [Canva] (https://www.canva.com/colors/color-wheel/).
+
+![Color palette](assets/documentation/color-palette.png)
+
+* I have used #fffaf0 and #2f4f4f as the main background colors for alternating sections.
+* They are slightly transparent to allow the background image to show through for some decorative effect.
+* Writing is done in contrasting colors to the background color.
 
 ## Features
 
