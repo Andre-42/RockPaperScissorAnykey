@@ -19,7 +19,7 @@ header {
     padding: 0px;
 }*/
 .headerfooter {
-    background-color: rgba(47,49,49,0.7);
+    background-color: rgba(47,49,49,0.9);
     color: floralwhite;
 }
 header > div {
@@ -90,7 +90,7 @@ header > div > div{
 
 /* game area design */
 #gamespace {
-    background-color: rgba(255, 250, 240,.7);
+    background-color: rgba(255, 250, 240,.9);
     padding: 5px 2px;
     height: 300px;
 }
@@ -209,10 +209,10 @@ div.your {
 
 /* score sheet */
 #scoresheet {
-    background-color:rgba(47,49,49,0.7);
+    background-color:rgba(47,49,49,0.9);
     color: rgba(255, 250, 240,1);
     position: absolute;
-    width: 30%;
+    width: 42%;
     padding: 0px 0px;
     height: 125px;
 }

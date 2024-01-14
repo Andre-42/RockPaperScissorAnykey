@@ -75,6 +75,26 @@ Icons for buttons are sourced from [Fontawesome](https://fontawesome.com/) when 
 Variations of it were created to be used as favicon or winning icon template (gold filled inner space).
 The background image was sourced from [Freeimage](https://www.freeimages.com/photo/rock-paper-scissors-2-1241086).
 
+### Features
+
+The website is comprised of a home page that includes all features.
+
+The page is responsive and has:
+
+* A favicon in the browser tab.
+![Favicon](assets/favicon/favicon-32x32.png)
+* The main title, a secondary title and menu buttons are located in the header. 
+* The navbar is located under the title. The cursor changes when hovering over a button/link.
+![Page Change](assets/documentation/curserresponce-button.mp4)
+Depending on the screen orientation and size, it will switch between a 2x2 and a 1x4 button arangement. 
+![button configuration depends on screen size and orientation](assets/documentation/responsive-arrangement.png)
+The same is true for move buttons in the game section.
+* The play button activates the game and reveals the move buttons in the gaming area. Once a game is active the editing icon next to the player icon is hidden. Additionally the icon of the play button changes to pause. 
+* Once pause is pressed the move buttons are hidden again and the editing icon next to the player is available again.
+* The stop button resets the score board below the gaming area.
+* The rules button will take you to the rules section of the website.
+
+
 ## Features
 
 The website is useable in all formats and adjusts to the screen size.
