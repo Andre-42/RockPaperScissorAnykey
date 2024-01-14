@@ -1,4 +1,4 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+![Title image](assets/documentation/am-i-responsive-01.png)
 
 ## Rock, Paper, Scissors ... any key
 
@@ -6,7 +6,9 @@ Welcome,
 
 This is my second project at the code institute. The core of this project is the java script functionalization of a front-end website. For this reason I chose the game "rock, paper, scissors, spock". However I put a little twist on it and added the "any key" move. As pretty much everybody knows the phrase: "Press any key to continue."
 
-## Design & features
+Visit the deployed site: [Rock, Paper, Scissor, Anykey](https://andre-42.github.io/RockPaperScissorAnykey/)
+
+## Features
 
 The website is useable in all formats and adjusts to the screen size.
 
