@@ -50,6 +50,11 @@ This can include features like randomized button configuration (placement and si
 4. Read the rules if you are not familiar already.
 4. Contact us if you have a cool idea to improve the game.
 
+## Design
+
+### Color Scheme
+
+
 ## Features
 
 The website is useable in all formats and adjusts to the screen size.

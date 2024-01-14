@@ -20,7 +20,7 @@ header {
 }*/
 .headerfooter {
     background-color: darkslategrey;
-    color: ghostwhite;
+    color: floralwhite;
 }
 header > div {
     display: inline-block;
@@ -90,7 +90,7 @@ header > div > div{
 
 /* game area design */
 #gamespace {
-    background-color: floralwhite;;
+    background-color: rgba(255, 250, 240,.7);
     padding: 5px 2px;
     height: 300px;
 }
@@ -209,8 +209,8 @@ div.your {
 
 /* score sheet */
 #scoresheet {
-    background-color:darkslategrey;
-    color: rgba(249, 246, 238,1);
+    background-color:rgba(47,49,49,0.7);
+    color: rgba(255, 250, 240,1);
     position: absolute;
     width: 30%;
     padding: 0px 0px;
@@ -228,7 +228,7 @@ div.your {
     display: inline-block;
 }
 #rules {
-    background-color: rgba(249, 246, 238, .7);
+    background-color: rgba(255, 250, 240, .7);
     /*background: background: url('../images/rock-paper-scissors-2-1241086.jpg') no-repeat center center;*/
     position: relative;
     top: 130px;
