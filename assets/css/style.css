@@ -216,7 +216,9 @@ div.your {
     padding: 0px 0px;
     height: 125px;
 }
-
+#scoresheet > div {
+    padding: 0px 10px;
+}
 
 /* rule book */
 #phone {
@@ -307,6 +309,7 @@ footer {
     }
     #scoresheet > div {
         font-size: 14px;
+        padding: 0px 10px;
     }
     /* rule book */
     #phone {
