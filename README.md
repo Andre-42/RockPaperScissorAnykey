@@ -1,12 +1,54 @@
 ![Title image](assets/documentation/am-i-responsive-01.png)
 
-## Rock, Paper, Scissors ... any key
+## Rock, Paper, Scissors ... ANY key
 
 Welcome,
 
+Visit the deployed site: [Rock, Paper, Scissor, Anykey](https://andre-42.github.io/RockPaperScissorAnykey/)
+
+## Contents
+
+* [General Intent](#general-intent)
+    * [Concept](#concept)
+    * [Usage](#usage)
+* [Design](#design)
+    * [Color Scheme](#color-scheme)
+    * [Typography](#typography)
+    * [Imagery](#imagery)
+    * [Wireframes](#wireframe)
+    * [HTML And CSS Features](#features)
+    * [Accessibility](#accessibility)
+* [Deployment And Local Development](#deployment--local-development)
+    * [Deployment](#deployment)
+    * [Local Development](#local-development)
+* [Testing](#testing)
+    * [Solved Bugs](#solved-bugs)
+    * [Known Bugs](#known-bugs)
+
+## General Intent
+
 This is my second project at the code institute. The core of this project is the java script functionalization of a front-end website. For this reason I chose the game "rock, paper, scissors, spock". However I put a little twist on it and added the "any key" move. As pretty much everybody knows the phrase: "Press any key to continue."
 
-Visit the deployed site: [Rock, Paper, Scissor, Anykey](https://andre-42.github.io/RockPaperScissorAnykey/)
+### Concept
+
+- **Pass your time:** This game is just a little gadget to get distracted, have a few minutes for yourself and than you can push on in your endeavors of the day.
+
+- **Informative Content:** There is not much informative content necessary for the game. Once you play, your score is tracted and you can see how you do. Of course you can inform yourself about the rules of the game in a seperate section of the site or check my contact links if you feel the need to learn more about me or get in touch.
+
+- **Visual Presentation:** I use visual aids, images and well-structured content with a simplistic design. The website is designed with clarity and user-friendliness in mind.
+
+- **Accessibility:** This is a pass time endevour. So it is accessibile to everyone and in particular to any key users.
+
+- **Future Intent:** This website is intended to give a place to get a few moments to yourself, recoupe by playing a simple game and than power on. Thus, future developments will likely add additional game play features to diversify gameplay options.
+This can include features like randomized button configuration (placement and size) or moving buttons to make the game more interesting for mobile devices.
+
+### Usage
+
+1. Visit the [Rock, Paper, Scissor, Anykey website](https://andre-42.github.io/RockPaperScissorAnykey/).
+2. Press play and off you go.
+3. Pause your game or reset it using the pause and stop button.
+4. Read the rules if you are not familiar already.
+4. Contact us if you have a cool idea to improve the game.
 
 ## Features
 
