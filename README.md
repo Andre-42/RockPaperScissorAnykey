@@ -60,7 +60,9 @@ Back in the 90s, keyboards were pretty dull. I wanted to capture that vibe in th
 
 * I have used #fffaf0 and #2f4f4f as the main background colors for alternating sections.
 * They are slightly transparent to allow the background image to show through for some decorative effect.
+![background image](assets/images/rock-paper-scissors-2-1241086.jpg)
 * Writing is done in contrasting colors to the background color.
+* Fallback colors in the body are white and black.
 
 ## Features
 

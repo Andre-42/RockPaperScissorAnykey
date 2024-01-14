@@ -19,7 +19,7 @@ header {
     padding: 0px;
 }*/
 .headerfooter {
-    background-color: darkslategrey;
+    background-color: rgba(47,49,49,0.7);
     color: floralwhite;
 }
 header > div {
