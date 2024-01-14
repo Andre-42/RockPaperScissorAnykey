@@ -273,7 +273,7 @@ footer {
         left: 0px;
     }
 }
-@media (max-width: 420px) {
+@media (max-width: 440px) {
     header {
         font-size: smaller;
         text-align: center;
@@ -326,7 +326,7 @@ footer {
         max-height: 16px;
     }
 }
-@media (max-height: 420px) {
+@media (max-height: 430px) {
     #scoresheet {
         width: 66%;
         left: 0px;
