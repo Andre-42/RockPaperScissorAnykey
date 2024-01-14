@@ -64,6 +64,17 @@ Back in the 90s, keyboards were pretty dull. I wanted to capture that vibe in th
 * Writing is done in contrasting colors to the background color.
 * Fallback colors in the body are white and black.
 
+### Typography
+
+Standard build in fonts Verdana and Times New Roman as backup were used.
+
+### Imagery
+
+Icons for buttons are sourced from [Fontawesome](https://fontawesome.com/) when freely available. The additional wormhole icon was sourced from [Flaticon](https://www.flaticon.com/free-icons/wormhole) and the ANY key icon was made in powerpoint and saved as png to allow for transparency when necessary.
+![ANYkey](assets/images/anykey_2x2cm_2f4f4f.png)
+Variations of it were created to be used as favicon or winning icon template (gold filled inner space).
+The background image was sourced from [Freeimage](https://www.freeimages.com/photo/rock-paper-scissors-2-1241086).
+
 ## Features
 
 The website is useable in all formats and adjusts to the screen size.
