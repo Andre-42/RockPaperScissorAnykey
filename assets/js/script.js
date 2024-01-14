@@ -391,7 +391,7 @@ function findWinner(player, pc) {
     }
     if (player === "wormhole" || player === "anykeybtn") {
         if (player === "anykeybtn" && playerWins === 1) {
-            document.getElementById("showhand-player-img").src = "assets/images/AnyKey_2x2cm_DAA520.png";
+            document.getElementById("showhand-player-img").src = "assets/images/anykey_2x2cm_daa520.png";
         } else {
             document.getElementById("showhand-player-img").src = document.getElementById("show-" + player).src;
         }
@@ -410,7 +410,7 @@ function findWinner(player, pc) {
     }
     if (pc === "wormhole" || pc === "anykeybtn") {
         if (pc === "anykeybtn" && playerWins === -1) {
-            document.getElementById("showhand-pc-img").src = "assets/images/AnyKey_2x2cm_DAA520.png";
+            document.getElementById("showhand-pc-img").src = "assets/images/anykey_2x2cm_daa520.png";
             document.getElementById("showhand-pc-img").style.opacity = 1;
         } else {
             document.getElementById("showhand-pc-img").src = document.getElementById("show-" + pc).src;
