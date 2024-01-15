@@ -128,7 +128,29 @@ The footer has a hidden section as well as the affiliated links to my facebook, 
 
 #### JS functions running website features
 
-In order to run this game a lot of minor an major functions need to be coordinated in JS.
+In order to run this game a lot of minor an major functions need to be coordinated in JS. All functions were created individually by myself. Inspiration for functionalities came from provided course material of Code Institute or from browsing thru tutorial sides, w3schools.com and developer.morzilla.com. No external libraries were used to create the code.
+
+The script initiates several global variables to run throughout the game in order to not initiating them every time a function is called. Afterwards the script uses several event listeners to listen for clicks, active hovering and leaving an active item. According to the output of these listeners the runGame() function is initiated with a todo command or countTime(), endTime() and shakeAgain() are initiated. Keyboard inputs are presented to either runGame() or commitInput().
+
+##### JS functions
+
+* runGame() initiates the functionality of the entire html according to the todo information. Which is a command word to initiate different functionalities. This is done by checking which command is given with a loop and if statements to call functions.
+* play() changes the play button to its pause icons and activates the shaking hand command.
+* pause() reverses the effect of play.
+* stop() resets the play button to its default and changes the values in the score sheet back to 0.
+* anykeyMode() changes the logical value ultimateKeyEnabled to its opposite and changes the 'ultimate ' button style.
+* keyInputTranslate() translates the keyboard input to game moves according to the keyboard values declared in the rules section.
+* commitInput creates an id variable for keyInputTranslate() to function. It also checks keyboard inputs to not be void and takes the original input instead.
+* playerID() changes playername between edit and save mode.
+* changePlayerName()  checks the form input if it is a valid name (not empty) and changes the input to its original state if it was invalid.
+* endTime() takes the exit time from the last hover/active item. 
+* scoreHand() initiates the scoring of a round by aquiring the players move , evaluating the time it took the player for the choice and initaiting the pc to choose in pcHand(). After recieving both scores it calculates if the player wins, looses or it was a draw and creates the appropriate icon design for both players hands as well as updating the result sheet.
+* pcHand() selects a move choice for the pc. If the player took too long and ultimate mode is enabled it will add the winning options to the list of possible draws and than select a random draw. Under normal condition the random selection is unbiased while under 'ultimate' mode the selection of choice will be scewed towards the player selection history.
+* findWinner() performs the visual changes to the game section under the scoreHand() function.
+* resultColor() is a support function for findWinner to determine the background color of the played icon.
+* shakeAgain() sets the players hand to a shaking hand in between draws during the active game.
+
+Many of these function automatically react to user input thus proactive user input is minimized to the essential actions and therefor users will likely not notice the extensive changes which take place while they play.
 
 ## Technologies Used
 
@@ -152,6 +174,7 @@ HTML, CSS, Javascript
 * Lighthouse (Google): Accessibility testing
 * Jigsaw: CSS testing
 * W3C HTML Validator: html testing
+*JShint: testing JS script syntax
 
 Some default assets may be missing from the list. This may be if I am unaware of there use in background operations during the creation of the project and I have not used them actively.
 
@@ -245,6 +268,13 @@ Each device tested the site using the following browsers:
 | --- | --- | --- | --- | --- |
 | The Sites title | Title changes dimensions responsive to viewing device and not constrict other sections of the html. | Checked different devices in developer tools on chrome. | Header does not obscure other content | Pass |
 | Header buttons | Buttons organize according to screen size and orientation | Checked different devices in developer tools on chrome. | Buttons are oriented as expected either in 1x4 or 2x2 configuration. | Pass |
+| Play button | Button switches to pause image when pressed and the control buttons for the game become visible while the player name editing button is hidden. | Press the button. | Playing function is enabled and necessary buttons are visible. Edit name button is hidden and play button shows pause configuration. | Pass |
+| Pause button | Button switches to play image when pressed and the control buttons for the game become invisible while the player name editing button is enabled. | Press the button. | Playing function is disabled and necessary buttons are hidden. Edit name button is enabled and pause button switches to play configuration. | Pass |
+| Stop button | Button clear result section and resets it to 0. This has no effect on page load but will change displayed information after playing previously. | Press the button. | Expected outcome is reached. | Pass |
+| Rules button | Button focusses page display on rules section. | Press the button. | Expected outcome is reached. | Pass |
+| Edit player name icon | Pressing the edit icon in disabled play mode unhides an input form to change the player name. After pressing the button the icon changes to a floppy disk. | Press the button. | Expected outcome is reached. | Pass |
+| Edit player name input form | Type different name into the form | Typed a new name in. | Name is changed to form input after saving with the floppy disc icon. | Pass |
+| Save player name icon | Pressing the edit icon in disabled play mode unhides an input form to change the player name. After pressing the button the icon changes to a floppy disk. Pressing the floppy disk icon will hide the input form and change the player name according to the input. | Press the button. | Expected outcome is reached. | Pass |
 
 
 ### Solved Bugs
@@ -252,6 +282,7 @@ Each device tested the site using the following browsers:
 | No | Bug | How I solved the issue |
 | :--- | :--- | :--- |
 | 1 | Alignment and overflow issues were observed between different screen sizes. | I identified breakpoints for screen widths where such alignmentent issues occured and implemented css rule changes regarding display options, margins and padding. This issue was very obvious when fontawesome icon were combined with image icons in the same layout. They seem to align with different reference properties which was fixable when using absolute reference locations instead of relative.  |
+| 2 | Ultimate mode is causing a problem in runGame(). | I identified that the if construct checks the innerText for 'ultimate' instead of 'ultimate ' as keyword. Thus the function performs the wron task selection which leads to errors in downstream function. Ultimate function is working properly after this declaration was corrected.  |
 
 #### HTML And Essentials Assessment Result Fixes
 | Criterion | Issue | How I solved the issue |
