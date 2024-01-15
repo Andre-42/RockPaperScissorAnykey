@@ -152,10 +152,11 @@ function anyKeyMode() {
         ultimateKeyEnabled = false;
         drawHistory = keyName;
         document.getElementsByClassName("btn btn-anykey")[0].style.backgroundColor = "floralWhite";
-        
+        console.log(ultimateKeyEnabled);
     } else {
         ultimateKeyEnabled = true;
         document.getElementsByClassName("btn btn-anykey")[0].style.backgroundColor = "cadetBlue";
+        console.log(ultimateKeyEnabled);
     }
 }
 /**
