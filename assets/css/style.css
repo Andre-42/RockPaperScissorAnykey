@@ -379,9 +379,19 @@ footer {
     #activeplayer {
         top: 340px;
     }
+    #scoresheet {
+        height: 140px;
+    }
     #scoresheet > div {
         font-size: 14px;
         padding: 0px 10px;
+    }
+    #rules {
+        top: 140px;
+        font-size: 14px;
+    }
+    footer {
+        top: 125px;
     }
     .social-networks {
         padding-right: 30px;
