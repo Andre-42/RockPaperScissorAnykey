@@ -161,178 +161,185 @@
                     <p>Wins will be awarded according to the following schematic:</p>
                     <div id="wideview">
                         <table>
-                            <tr>
-                                <td>
-                                    <strong>rock</strong>
-                                </td>
-                                <td>
-                                    <i class="fa-regular fa-hand-back-fist"></i>
-                                </td>
-                                <td>
-                                    key:
-                                </td>
-                                <td>
-                                    <input type="text" id="input-rock-key" value="r" maxlength="1" size="1" aria-label="input rock keyboard character">
-                                    <button data-type="commit-key" class="btn btn-playerid" type="button" aria-label="edit/save keyboard character">
-                                        <i class="fa-solid fa-pen-to-square"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    beats
-                                </td>
-                                <td class="rock-win" id="scissor">scissors,</td>
-                                <td class="rock-win" id="anykeybtn">any buttons</td>
-                                <td class="rock-win" id="lizard">and lizards.</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>paper</strong>
-                                </td>
-                                <td>
-                                    <i class="fa-regular fa-hand"></i>
-                                </td>
-                                <td>
-                                    key:
-                                </td>
-                                <td>
-                                    <input type="text" id="input-paper-key" value="p" maxlength="1" size="1" aria-label="input paper keyboard character">
-                                    <button data-type="commit-key" class="btn btn-playerid" type="button" aria-label="edit/save keyboard character">
-                                        <i class="fa-solid fa-pen-to-square"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    covers/disproves
-                                </td>
-                                <td class="paper-win" id="rock">rocks,</td>
-                                <td class="paper-win" id="wormhole">wormholes</td>
-                                <td class="paper-win" id="spock">and Spock.</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>scissor</strong>
-                                </td>
-                                <td>
-                                    <i class="fa-regular fa-hand-scissors"></i>
-                                </td>
-                                <td>
-                                    key:
-                                </td>
-                                <td>
-                                    <input type="text" id="input-scissor-key" value="s" maxlength="1" size="1" aria-label="input scissor keyboard character">
-                                    <button data-type="commit-key" class="btn btn-playerid" type="button" aria-label="edit/save keyboard character">
-                                        <i class="fa-solid fa-pen-to-square"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    cuts/breaks
-                                </td>
-                                <td class="scissor-win" id="anykeybtn">any buttons,</td>
-                                <td class="scissor-win" id="paper">paper</td>
-                                <td class="scissor-win" id="lizard">and lizardtails.</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>lizard</strong>
-                                </td>
-                                <td>
-                                    <i class="fa-regular fa-hand-lizard"></i>
-                                </td>
-                                <td>
-                                    key:
-                                </td>
-                                <td>
-                                    <input type="text" id="input-lizard-key" value="l" maxlength="1" size="1" aria-label="input lizard keyboard character">
-                                    <button data-type="commit-key" class="btn btn-playerid" type="button" aria-label="edit/save keyboard character">
-                                        <i class="fa-solid fa-pen-to-square"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    beats or ...
-                                </td>
-                                <td class="lizard-win" id="paper">eats paper,</td>
-                                <td class="lizard-win" id="spock">poisons spock</td>
-                                <td class="lizard-win" id="wormhole">and doesn&#39;t care about wormholes.</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>spock</strong>
-                                </td>
-                                <td>
-                                    <i class="fa-regular fa-hand-spock"></i>
-                                </td>
-                                <td>
-                                    key:
-                                </td>
-                                <td>
-                                    <input type="text" id="input-spock-key" value="v" maxlength="1" size="1" aria-label="input spock keyboard character">
-                                    <button data-type="commit-key" class="btn btn-playerid" type="button" aria-label="edit/save keyboard character">
-                                        <i class="fa-solid fa-pen-to-square"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    just...
-                                </td>
-                                <td class="spock-win" id="rock">lives of rocks,</td>
-                                <td class="spock-win" id="scissor">bends scissors</td>
-                                <td class="spock-win" id="lizard">and cheats time using wormholes.</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>wormhole</strong>
-                                </td>
-                                <td>
-                                    <img src="assets/images/wormhole_5570657.png" alt="wormhole">
-                                </td>
-                                <td>
-                                    key:
-                                </td>
-                                <td>
-                                    <input type="text" id="input-wormhole-key" value="x" maxlength="1" size="1" aria-label="input wormhole keyboard character">
-                                    <button data-type="commit-key" class="btn btn-playerid" type="button" aria-label="edit/save keyboard character">
-                                        <i class="fa-solid fa-pen-to-square"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    sucks in...
-                                </td>
-                                <td class="wormhole-win" id="rock">sucks in rocks,</td>
-                                <td class="wormhole-win" id="scissor">scissors</td>
-                                <td class="wormhole-win" id="anykeybtn">and any buttons.</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>any key</strong>
-                                </td>
-                                <td>
-                                    <img src="assets/images/anykey_2x2cm.png" alt="anykey">
-                                </td>
-                                <td>
-                                    key:
-                                </td>
-                                <td>
-                                    ... just any key.
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    well...
-                                </td>
-                                <td class="anykeybtn-win" id="paper">rewrites papers,</td>
-                                <td class="anykeybtn-win" id="spock">confuses Spock</td>
-                                <td class="anykeybtn-win" id="lizard">and chokes lizards.</td>
-                            </tr>
+                            <thead>
+                                <tr>
+                                  <th colspan="4">Movement types</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <strong>rock</strong>
+                                    </td>
+                                    <td>
+                                        <i class="fa-regular fa-hand-back-fist"></i>
+                                    </td>
+                                    <td>
+                                        key:
+                                    </td>
+                                    <td>
+                                        <input type="text" id="input-rock-key" value="r" maxlength="1" size="1" aria-label="input rock keyboard character">
+                                        <button data-type="commit-key" class="btn btn-playerid" type="button" aria-label="edit/save keyboard character">
+                                            <i class="fa-solid fa-pen-to-square"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        beats
+                                    </td>
+                                    <td class="rock-win" id="scissor">scissors,</td>
+                                    <td class="rock-win" id="anykeybtn">any buttons</td>
+                                    <td class="rock-win" id="lizard">and lizards.</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>paper</strong>
+                                    </td>
+                                    <td>
+                                        <i class="fa-regular fa-hand"></i>
+                                    </td>
+                                    <td>
+                                        key:
+                                    </td>
+                                    <td>
+                                        <input type="text" id="input-paper-key" value="p" maxlength="1" size="1" aria-label="input paper keyboard character">
+                                        <button data-type="commit-key" class="btn btn-playerid" type="button" aria-label="edit/save keyboard character">
+                                            <i class="fa-solid fa-pen-to-square"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        covers/disproves
+                                    </td>
+                                    <td class="paper-win" id="rock">rocks,</td>
+                                    <td class="paper-win" id="wormhole">wormholes</td>
+                                    <td class="paper-win" id="spock">and Spock.</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>scissor</strong>
+                                    </td>
+                                    <td>
+                                        <i class="fa-regular fa-hand-scissors"></i>
+                                    </td>
+                                    <td>
+                                        key:
+                                    </td>
+                                    <td>
+                                        <input type="text" id="input-scissor-key" value="s" maxlength="1" size="1" aria-label="input scissor keyboard character">
+                                        <button data-type="commit-key" class="btn btn-playerid" type="button" aria-label="edit/save keyboard character">
+                                            <i class="fa-solid fa-pen-to-square"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        cuts/breaks
+                                    </td>
+                                    <td class="scissor-win" id="anykeybtn">any buttons,</td>
+                                    <td class="scissor-win" id="paper">paper</td>
+                                    <td class="scissor-win" id="lizard">and lizardtails.</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>lizard</strong>
+                                    </td>
+                                    <td>
+                                        <i class="fa-regular fa-hand-lizard"></i>
+                                    </td>
+                                    <td>
+                                        key:
+                                    </td>
+                                    <td>
+                                        <input type="text" id="input-lizard-key" value="l" maxlength="1" size="1" aria-label="input lizard keyboard character">
+                                        <button data-type="commit-key" class="btn btn-playerid" type="button" aria-label="edit/save keyboard character">
+                                            <i class="fa-solid fa-pen-to-square"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        beats or ...
+                                    </td>
+                                    <td class="lizard-win" id="paper">eats paper,</td>
+                                    <td class="lizard-win" id="spock">poisons spock</td>
+                                    <td class="lizard-win" id="wormhole">and doesn&#39;t care about wormholes.</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>spock</strong>
+                                    </td>
+                                    <td>
+                                        <i class="fa-regular fa-hand-spock"></i>
+                                    </td>
+                                    <td>
+                                        key:
+                                    </td>
+                                    <td>
+                                        <input type="text" id="input-spock-key" value="v" maxlength="1" size="1" aria-label="input spock keyboard character">
+                                        <button data-type="commit-key" class="btn btn-playerid" type="button" aria-label="edit/save keyboard character">
+                                            <i class="fa-solid fa-pen-to-square"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        just...
+                                    </td>
+                                    <td class="spock-win" id="rock">lives of rocks,</td>
+                                    <td class="spock-win" id="scissor">bends scissors</td>
+                                    <td class="spock-win" id="lizard">and cheats time using wormholes.</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>wormhole</strong>
+                                    </td>
+                                    <td>
+                                        <img src="assets/images/wormhole_5570657.png" alt="wormhole">
+                                    </td>
+                                    <td>
+                                        key:
+                                    </td>
+                                    <td>
+                                        <input type="text" id="input-wormhole-key" value="x" maxlength="1" size="1" aria-label="input wormhole keyboard character">
+                                        <button data-type="commit-key" class="btn btn-playerid" type="button" aria-label="edit/save keyboard character">
+                                            <i class="fa-solid fa-pen-to-square"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        sucks in...
+                                    </td>
+                                    <td class="wormhole-win" id="rock">sucks in rocks,</td>
+                                    <td class="wormhole-win" id="scissor">scissors</td>
+                                    <td class="wormhole-win" id="anykeybtn">and any buttons.</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>any key</strong>
+                                    </td>
+                                    <td>
+                                        <img src="assets/images/anykey_2x2cm.png" alt="anykey">
+                                    </td>
+                                    <td>
+                                        key:
+                                    </td>
+                                    <td>
+                                        ... just any key.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        well...
+                                    </td>
+                                    <td class="anykeybtn-win" id="paper">rewrites papers,</td>
+                                    <td class="anykeybtn-win" id="spock">confuses Spock</td>
+                                    <td class="anykeybtn-win" id="lizard">and chokes lizards.</td>
+                                </tr>
+                            </tbody>
                         </table>
                     </div>
                     <div id="phone">
