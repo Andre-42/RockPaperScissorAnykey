@@ -168,3 +168,18 @@ To Deploy the site using GitHub Pages:
 5. From the source dropdown select main branch and press save.
 6. The site has now been deployed, please note that this process may take a few minutes before the site goes live.
 
+## Testing
+
+Please refer to [TESTING.md](TESTING.md) file for all testing carried out.
+
+### Solved Bugs
+
+| No | Bug | How I solved the issue |
+| :--- | :--- | :--- |
+| 1 | Alignment and overflow issues were observed between different screen sizes. | I identified breakpoints for screen widths where such alignmentent issues occured and implemented css rule changes regarding display options, margins and padding. This issue was very obvious when fontawesome icon were combined with image icons in the same layout. They seem to align with different reference properties which was fixable when using absolute reference locations instead of relative.  |
+
+#### HTML And Essentials Assessment Result Fixes
+| Criterion | Issue | How I solved the issue |
+| :--- | :--- | :--- |
+| 1.2| Further accessibility considerations will need to be made to meet this criterion. | Added missing aria-labels to buttons and input features to improve accessibility which tests now in lighthouse over 90%. |
+| 1.4| Information is varying across different pages resolutions or devices. | Adjusted css rules for each section to allow for similar transparency ratios. This allows for a slight visibility of the background image, while still enabling a strong foreground contrast. Color scheme is also supporting strong contrast. |
