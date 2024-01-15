@@ -35,7 +35,7 @@ This is my second project at the code institute. The core of this project is the
 
 - **Informative Content:** There is not much informative content necessary for the game. Once you play, your score is tracted and you can see how you do. Of course you can inform yourself about the rules of the game in a seperate section of the site or check my contact links if you feel the need to learn more about me or get in touch.
 
-- **Visual Presentation:** I use visual aids, images and well-structured content with a simplistic design. The website is designed with clarity and user-friendliness in mind.
+- **Visual Presentation:** I use visual aids, images and well-structured content with a simplistic design. The website is designed with clarity and user-friendliness in mind. It is supposed to look a bit old fashioned and gray just as the keyboards in the 90s.
 
 - **Accessibility:** This is a pass time endevour. So it is accessibile to everyone and in particular to any key users.
 
@@ -128,7 +128,7 @@ The footer has a hidden section as well as the affiliated links to my facebook, 
 
 #### JS functions running website features
 
-In order to run this game a lot of minor an major functions need to be coordinated in JS. All functions were created individually by myself. Inspiration for functionalities came from provided course material of Code Institute or from browsing thru tutorial sides, w3schools.com and developer.morzilla.com. No external libraries were used to create the code.
+In order to run this game a lot of minor an major functions need to be coordinated in JS. All functions were created individually by myself. Inspiration for functionalities came from provided course material of Code Institute or from browsing thru tutorial sides, w3schools.com and developer.morzilla.com. No external libraries were used to create the code in order to remain as original to my own approach as I could.
 
 The script initiates several global variables to run throughout the game in order to not initiating them every time a function is called. Afterwards the script uses several event listeners to listen for clicks, active hovering and leaving an active item. According to the output of these listeners the runGame() function is initiated with a todo command or countTime(), endTime() and shakeAgain() are initiated. Keyboard inputs are presented to either runGame() or commitInput().
 
@@ -174,7 +174,7 @@ HTML, CSS, Javascript
 * Lighthouse (Google): Accessibility testing
 * Jigsaw: CSS testing
 * W3C HTML Validator: html testing
-*JShint: testing JS script syntax
+* JShint: testing JS script syntax
 
 Some default assets may be missing from the list. This may be if I am unaware of there use in background operations during the creation of the project and I have not used them actively.
 
@@ -275,14 +275,16 @@ Each device tested the site using the following browsers:
 | Edit player name icon | Pressing the edit icon in disabled play mode unhides an input form to change the player name. After pressing the button the icon changes to a floppy disk. | Press the button. | Expected outcome is reached. | Pass |
 | Edit player name input form | Type different name into the form | Typed a new name in. | Name is changed to form input after saving with the floppy disc icon. | Pass |
 | Save player name icon | Pressing the edit icon in disabled play mode unhides an input form to change the player name. After pressing the button the icon changes to a floppy disk. Pressing the floppy disk icon will hide the input form and change the player name according to the input. | Press the button. | Expected outcome is reached. | Pass |
-
+| Gameplay | Play the game by pressing buttons for different moves. Chnages in hand icons should be achieved according to who wins and loses. | Play the game. | The game runs smoothly. Every hand can be executed and a win/draw/loss depiction by style changes is executed as intended. The score sheet is updated automatically. In desktop mode the hands switch back to shaking fists [video](assets/documentation/shaking-hands.mp4) when not selecting and icon but changing the mouse position. This feature is not achievable in modile mode. | Pass |
+| Keyboard usage | Change keyboard annotation in the rules section. | Press the edit button, edit the key, and press the edit icon again to save. | Expected outcome is reached. | Pass |
+| Social media links | Pressing the links in the footer opens a new tab with the appropriate content | Press the links | Expected outcome is reached. | Pass |
 
 ### Solved Bugs
 
 | No | Bug | How I solved the issue |
 | :--- | :--- | :--- |
 | 1 | Alignment and overflow issues were observed between different screen sizes. | I identified breakpoints for screen widths where such alignmentent issues occured and implemented css rule changes regarding display options, margins and padding. This issue was very obvious when fontawesome icon were combined with image icons in the same layout. They seem to align with different reference properties which was fixable when using absolute reference locations instead of relative.  |
-| 2 | Ultimate mode is causing a problem in runGame(). | I identified that the if construct checks the innerText for 'ultimate' instead of 'ultimate ' as keyword. Thus the function performs the wron task selection which leads to errors in downstream function. Ultimate function is working properly after this declaration was corrected.  |
+| 2 | Ultimate mode is causing a problem in runGame(). | I identified that the if construct checks the innerText for 'ultimate' instead of 'ultimate ' as keyword. Thus the function performs the wrong task selection which leads to errors in downstream function. Ultimate function is working properly after this declaration was corrected.  |
 
 #### HTML And Essentials Assessment Result Fixes
 | Criterion | Issue | How I solved the issue |
@@ -292,11 +294,16 @@ Each device tested the site using the following browsers:
 | 2.2 | Fails to pass through the official (W3C) validator. | Correction to both css and html have been made. It now passes all vaildators. See testing. |
 | 2.Additional | Ensure that favicon-related files are inside a dedicated favicon folder in the assets directory. | Favicon elements have been moved into a seperate assets folder and linked in the html head. |
 | 4.1 | README does not contain all required sections | Readme has now been extended to have similar content to suggested [template](https://github.com/Code-Institute-Solutions/readme-template). |
-| 4.2 | Relevant screenshots are missing. | Screen shots have been intreduced to the readme. |
-| 4.3 | Attributions missing in code files or README. | add answer!!! |
-| 4.4 | Unclear separation of code written for the website and code from external sources | add answer!!! |
+| 4.2 | Relevant screenshots are missing. | Screen shots have been introduced to the readme. |
+| 4.3 | Attributions missing in code files or README. | Attributions have been added under [frameworks](# Frameworks, Libraries & Programs Used) |
+| 4.4 | Unclear separation of code written for the website and code from external sources | As I understand it, it is my own code as I only used standard functions or created my own. Inspiration was provided by the support tools mentioned in the JS section. As it is all original I don't know what I need to indicate as external souce code. |
 | 5.1 | Not enough documentation is present in the README to meet this criterion | documentation has been improved in github through additional readme content and frequent commit messages for changes. |
 | 6.1 | Unclear separation of external code used and custom code written for this project. | For loops are involved in major functions i.e., runGame, commitInput and during the event listening face. If conditions are used throughout the entire JS script. Inspiration for functions comes soley from CodeInstitute provided course material, developer.mozilla.com and W3schools.com manual content for the general structure of JS programming. The functionalities within the script were written without the use of additional function libraries. |
-| 6.3 | Unclear requirements outlined in README file. | add comment! |
+| 6.3 | Unclear requirements outlined in README file. | Requirements are added to the readme in the appropriate sections. |
 
 ### Known Bugs
+
+| No | Bug | How I plan to solve it.|
+| :--- | :--- | :--- |
+| 1 | Minor alignment issues with buttons under extreme screen sizes. | Write specific CSS code for those screen sizes to keep visual aspects in check. Eventually rewriting the html and css in bootstrap to make CSS rules more uniform. and easier to correct. |
+| 2 | Functionality support for hover features on touch screen devices. | As of now this project is aimed at desktop users, since some of the hover and mouse related features are not translatable into touch feature. As finger draging is often not used on touch screens in this kind of game environment. Additional features such as moving buttons could be implemented in the future to increase the gameplay experience on touch devices and compensate for the loss of other functions that are mouse or keyboard related. |
