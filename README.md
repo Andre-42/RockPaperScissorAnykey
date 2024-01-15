@@ -172,6 +172,21 @@ To Deploy the site using GitHub Pages:
 
 Please refer to [TESTING.md](TESTING.md) file for all testing carried out.
 
+Testing was ongoing throughout the entire build. I utilised Chrome developer tools whilst building to pinpoint and troubleshoot any issues as I went along.
+
+During development I made use of google developer tools to ensure everything was working correctly and to assist with troubleshooting when things were not working as expected.
+
+I have gone through each functionality using google chrome developer tools and applied the different mobile and desktop screen simulations within that tool.
+
+### AUTOMATED TESTING
+
+#### W3C Validator
+
+[W3C](https://validator.w3.org/) was used to validate the HTML on all pages of the website. It was also used to validate the CSS.
+
+* [index.html](index.html)
+![index.html](documentation/W3C-index-validation.png) - Passed.
+
 ### Solved Bugs
 
 | No | Bug | How I solved the issue |
@@ -192,3 +207,5 @@ Please refer to [TESTING.md](TESTING.md) file for all testing carried out.
 | 5.1 | Not enough documentation is present in the README to meet this criterion | documentation has been improved in github through additional readme content and frequent commit messages for changes. |
 | 6.1 | Unclear separation of external code used and custom code written for this project. | For loops are involved in major functions i.e., runGame, commitInput and during the event listening face. If conditions are used throughout the entire JS script. Inspiration for functions comes soley from CodeInstitute provided course material, developer.mozilla.com and W3schools.com manual content for the general structure of JS programming. The functionalities within the script were written without the use of additional function libraries. |
 | 6.3 | Unclear requirements outlined in README file. | add comment! |
+
+### Known Bugs
