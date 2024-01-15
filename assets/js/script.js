@@ -52,6 +52,7 @@ function runGame(todo) {
     let tagfunc = "-";
     if ((todo === "playpause") || (todo === "stop") || (todo === "anykey") || (todo === "rules")) {
         tagfunc = document.getElementById(todo).innerText;
+        console.log(tagfunc)
     }
     if (tagfunc === "play") {
         play();

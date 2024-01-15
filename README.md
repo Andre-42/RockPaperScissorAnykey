@@ -237,6 +237,16 @@ Each device tested the site using the following browsers:
 * Google Chrome
 * Safari
 
+### Manual Testing
+
+`Home Page`
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+| The Sites title | Title changes dimensions responsive to viewing device and not constrict other sections of the html. | Checked different devices in developer tools on chrome. | Header does not obscure other content | Pass |
+| Header buttons | Buttons organize according to screen size and orientation | Checked different devices in developer tools on chrome. | Buttons are oriented as expected either in 1x4 or 2x2 configuration. | Pass |
+
+
 ### Solved Bugs
 
 | No | Bug | How I solved the issue |
