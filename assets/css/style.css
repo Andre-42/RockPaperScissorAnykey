@@ -274,6 +274,12 @@ footer {
     }
 }
 @media (max-width: 550px) {
+    header {
+        font-size: smaller;
+        text-align: center;
+        height:232px;
+        
+    }
     .btn {
         width: 140px;
     }
@@ -336,6 +342,38 @@ footer {
         td .fa-regular,img {
         font-size: 1rem;
         max-height: 16px;
+    }
+}
+@media (max-width: 300px) {
+    header {
+        font-size: xx-small;
+        text-align: center;
+        height:232px;
+        
+    }
+    .btn {
+        width: 140px;
+    }
+    .btn-size {
+        width: 40vw;
+    }
+    .fa-solid {
+        font-size: 25px;
+    }
+    .btn-index-img {
+        height:21px;
+        font-size: 25px;
+    }
+    h3 {
+        padding-top: 15px;
+    }
+    .btn-playerid {
+        width: 20px;
+        height: 20px;
+    }
+    #scoresheet > div {
+        font-size: 14px;
+        padding: 0px 10px;
     }
 }
 @media (max-height: 430px) {
