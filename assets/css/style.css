@@ -366,6 +366,9 @@ footer {
         height:21px;
         font-size: 25px;
     }
+    #gamespace {
+        height: 350px;
+    }
     h3 {
         padding-top: 15px;
     }
@@ -373,9 +376,15 @@ footer {
         width: 20px;
         height: 20px;
     }
+    #activeplayer {
+        top: 340px;
+    }
     #scoresheet > div {
         font-size: 14px;
         padding: 0px 10px;
+    }
+    .social-networks {
+        padding-right: 30px;
     }
 }
 @media (max-height: 430px) {
