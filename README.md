@@ -181,5 +181,14 @@ Please refer to [TESTING.md](TESTING.md) file for all testing carried out.
 #### HTML And Essentials Assessment Result Fixes
 | Criterion | Issue | How I solved the issue |
 | :--- | :--- | :--- |
-| 1.2| Further accessibility considerations will need to be made to meet this criterion. | Added missing aria-labels to buttons and input features to improve accessibility which tests now in lighthouse over 90%. |
-| 1.4| Information is varying across different pages resolutions or devices. | Adjusted css rules for each section to allow for similar transparency ratios. This allows for a slight visibility of the background image, while still enabling a strong foreground contrast. Color scheme is also supporting strong contrast. |
+| 1.2 | Further accessibility considerations will need to be made to meet this criterion. | Added missing aria-labels to buttons and input features to improve accessibility which tests now in lighthouse over 90%. |
+| 1.4 | Information is varying across different pages resolutions or devices. | Adjusted css rules for each section to allow for similar transparency ratios. This allows for a slight visibility of the background image, while still enabling a strong foreground contrast. Color scheme is also supporting strong contrast. |
+| 2.2 | Fails to pass through the official (W3C) validator. | Correction to both css and html have been made. It now passes all vaildators. See testing. |
+| 2.Additional | Ensure that favicon-related files are inside a dedicated favicon folder in the assets directory. | Favicon elements have been moved into a seperate assets folder and linked in the html head. |
+| 4.1 | README does not contain all required sections | Readme has now been extended to have similar content to suggested [template](https://github.com/Code-Institute-Solutions/readme-template). |
+| 4.2 | Relevant screenshots are missing. | Screen shots have been intreduced to the readme. |
+| 4.3 | Attributions missing in code files or README. | add answer!!! |
+| 4.4 | Unclear separation of code written for the website and code from external sources | add answer!!! |
+| 5.1 | Not enough documentation is present in the README to meet this criterion | documentation has been improved in github through additional readme content and frequent commit messages for changes. |
+| 6.1 | Unclear separation of external code used and custom code written for this project. | For loops are involved in major functions i.e., runGame, commitInput and during the event listening face. If conditions are used throughout the entire JS script. Inspiration for functions comes soley from CodeInstitute provided course material, developer.mozilla.com and W3schools.com manual content for the general structure of JS programming. The functionalities within the script were written without the use of additional function libraries. |
+| 6.3 | Unclear requirements outlined in README file. | add comment! |
