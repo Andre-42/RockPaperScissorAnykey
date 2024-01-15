@@ -185,7 +185,57 @@ I have gone through each functionality using google chrome developer tools and a
 [W3C](https://validator.w3.org/) was used to validate the HTML on all pages of the website. It was also used to validate the CSS.
 
 * [index.html](index.html)
-![index.html](documentation/W3C-index-validation.png) - Passed.
+![index.html](assets/documentation/w3c-validator-html.png) - Passed.
+* [style.css](assets/css/style.css)
+[style.css](assets/documentation/w3c-validator-css.png) - Passed.
+
+- - -
+
+#### JavaScript Validator
+
+[jshint](https://jshint.com/) was used to validate the JavaScript.
+
+* [script.js](documentation/jshint.png) - Passed, with 62 warnings regarding version availability:
+    - 'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz)
+    - Metrics:
+        There are 21 functions in this file.
+        Function with the largest signature take 2 arguments, while the median is 1.
+        Largest function has 45 statements in it, while the median is 8.
+        The most complex function has a cyclomatic complexity value of 14 while the median is 2.
+
+- - -
+
+#### Lighthouse
+
+I used Lighthouse within the Chrome Developer Tools to test the performance, accessibility, best practices and SEO of the website.
+
+##### Desktop Results
+
+Each page is achieving a score of at least 90 for accessibility and best practise.
+
+![index.html](assets/documentation/lighthouse-desktop.png)
+
+##### Mobile Results
+
+Each page is achieving a score of at least 93 for accessibility and best practise.
+
+![index.html](assets/documentation/lighthouse-mobile.png)
+
+- - -
+
+### Full Testing
+
+Full testing was performed on the following devices:
+
+* Laptop:
+  * ASUS Vivobook Pro 16x OLED
+* Mobile Devices:
+  * iPhone SE 2.
+
+Each device tested the site using the following browsers:
+
+* Google Chrome
+* Safari
 
 ### Solved Bugs
 

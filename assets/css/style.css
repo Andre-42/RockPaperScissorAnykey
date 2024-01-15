@@ -273,6 +273,18 @@ footer {
         left: 0px;
     }
 }
+@media (max-width: 550px) {
+    .btn {
+        width: 140px;
+    }
+    .btn-size {
+        width: 40vw;
+    }
+    #scoresheet > div {
+        font-size: 14px;
+        padding: 0px 10px;
+    }
+}
 @media (max-width: 440px) {
     header {
         font-size: smaller;
