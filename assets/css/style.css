@@ -349,10 +349,12 @@ footer {
         font-size: xx-small;
         text-align: center;
         height:232px;
-        
+    }
+    h1, h2, h3 {
+        font-size: xx-small;
     }
     .btn {
-        width: 140px;
+        width: 100px;
     }
     .btn-size {
         width: 40vw;
