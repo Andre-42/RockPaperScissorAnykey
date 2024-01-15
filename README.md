@@ -130,6 +130,41 @@ The footer has a hidden section as well as the affiliated links to my facebook, 
 
 In order to run this game a lot of minor an major functions need to be coordinated in JS.
 
-## Tests
+## Technologies Used
 
-I've tested the code for html, css and javascript.
+### Languages Used
+
+HTML, CSS, Javascript
+
+### Frameworks, Libraries & Programs Used
+
+* Am I Responsive?: display website responsiveness
+* CodeAnywhere: IDE for site creation
+* Powerpoint: for icon creation
+* Favicon.io: favicon creation
+* Git: version control
+* Github: file storage for website and repository template
+* GitPod: IDE for site creation
+* Google Fonts: font-family import
+* Google Developer Tools: troubleshooting, feature testing, styling 
+* iloveimg.com: image compression
+* Webpage Spell-Check: chrome extension for spell checking
+* Lighthouse (Google): Accessibility testing
+* Jigsaw: CSS testing
+* W3C HTML Validator: html testing
+
+Some default assets may be missing from the list. This may be if I am unaware of there use in background operations during the creation of the project and I have not used them actively.
+
+## Deployment
+
+The site is deployed using GitHub Pages - [Rock, Paper, Scissor, Anykey](https://andre-42.github.io/RockPaperScissorAnykey/).
+
+To Deploy the site using GitHub Pages:
+
+1. Login (or signup) to Github.
+2. Go to the repository for this project, [Andre-42/RockPaperScissorAnykey](https://github.com/Andre-42/RockPaperScissorAnykey).
+3. Click the settings button.
+4. Select pages in the left hand navigation menu.
+5. From the source dropdown select main branch and press save.
+6. The site has now been deployed, please note that this process may take a few minutes before the site goes live.
+
