@@ -52,7 +52,7 @@ function runGame(todo) {
     let tagfunc = "-";
     if ((todo === "playpause") || (todo === "stop") || (todo === "anykey") || (todo === "rules")) {
         tagfunc = document.getElementById(todo).innerText;
-        console.log(tagfunc)
+        console.log(tagfunc);
     }
     if (tagfunc === "play") {
         play();
@@ -60,7 +60,7 @@ function runGame(todo) {
         pause();
     } else if (tagfunc === "stop playing") {
         stop();
-    } else if (tagfunc === "ultimate") {
+    } else if (tagfunc === "ultimate ") {
         anyKeyMode();
     } else if (tagfunc === "rules") {
         console.log("reading the rules");
